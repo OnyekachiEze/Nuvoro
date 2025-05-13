@@ -74,15 +74,7 @@ body {
   background: #eb346e;
 }
 
-.menu-toggle {
-  display: none;
-  /* Initially hidden for large screens */
-  flex-direction: column;
-  gap: 4px;
-  cursor: pointer;
-  z-index: 1000;
-  /* Ensure it’s above the nav */
-}
+
 
 .menu-toggle span {
   height: 3px;
@@ -91,6 +83,55 @@ body {
   border-radius: 10px;
   transition: all 0.3s ease;
 }
+
+.menu-toggle {
+  width: 30px;
+  height: 3px;
+  background: #fff;
+  position: relative;
+  transition: background 0.3s ease;
+  cursor: pointer;
+  z-index: 1100;
+  flex-direction: column;
+  gap: 4px;
+  display: none;
+
+}
+
+.menu-toggle::before,
+.menu-toggle::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background: #fff;
+  transition: transform 0.3s ease, top 0.3s ease, opacity 0.3s ease;
+}
+
+.menu-toggle::before {
+  top: -10px;
+}
+
+.menu-toggle::after {
+  top: 10px;
+}
+
+/* Transform to X when active */
+.menu-toggle.active {
+  background: transparent; /* Hide the middle line */
+}
+
+.menu-toggle.active::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.menu-toggle.active::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+
 
 /* Mobile View */
 @media (max-width: 768px) {
@@ -645,38 +686,37 @@ body {
 
 
 
-/* Container for the main section */
-.academy-container {
+/* Container for the main section */.academy-container {
   max-width: 1200px;
   padding: 3rem 1.5rem;
   display: flex;
-  /* flex-direction: column; */
+  flex-direction: row;
   gap: 2.5rem;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap; /* Ensures wrap if needed */
 }
 
 /* Text Section */
 .text-section {
   max-width: 25rem;
   color: #1a1f3d;
+  flex: 1;
 }
 
 .intro-text {
   font-size: 0.875rem;
-  font-weight: normal;
   margin-bottom: 0.375rem;
 }
 
 .title {
-  font-size: 1.25rem;
+  font-size: 1.75rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
 }
 
 .description {
   font-size: 1rem;
-  font-weight: normal;
   margin-bottom: 2rem;
   line-height: 1.75;
 }
@@ -685,6 +725,7 @@ body {
 .button-container {
   display: flex;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .read-more-btn,
@@ -720,8 +761,7 @@ body {
 
 /* Image Section */
 .image-section {
-  flex-shrink: 0;
-  width: 100%;
+  flex: 1;
   max-width: 30rem;
 }
 
@@ -730,6 +770,47 @@ body {
   height: auto;
   object-fit: cover;
   border-radius: 0.375rem;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .academy-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-section,
+  .image-section {
+    max-width: 100%;
+  }
+
+  .button-container {
+    justify-content: center;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .description {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.25rem;
+  }
+
+  .description {
+    font-size: 0.875rem;
+  }
+
+  .read-more-btn,
+  .register-btn {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 
