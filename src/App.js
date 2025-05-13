@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import HeroSection from './components/HeroSection';
 import ServicesSection from './components/ServicesSection';
+import CoursesTabs from './components/CoursesTabs';
 
 
 // Stats number animation function
@@ -37,6 +38,7 @@ const App = () => {
     <div>
       <HeroSection  />
       <ServicesSection />
+      <CoursesTabs />
       
     </div>
   );
