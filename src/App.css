@@ -943,3 +943,140 @@ body {
   font-weight: 600;
   color: #1b2a5b;
 }
+
+
+
+
+.testimonial-section {
+  /* background-color: #f4f4f5; */
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.testimonial-title {
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: #1a1a1a;
+  margin-bottom: 2.5rem;
+}
+
+.testimonial-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  max-width: 96rem;
+  margin: 0 auto;
+}
+
+.testimonial-card {
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.testimonial-card:hover {
+  transform: scale(1.05);
+}
+
+.testimonial-main {
+  background: linear-gradient(to bottom, #fb923c, #ea580c);
+  padding: 0.25rem;
+}
+
+.testimonial-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 1.5rem;
+  background-color: white;
+}
+
+.main-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonial-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1.5rem;
+}
+
+.main-img {
+  opacity: 0.8;
+}
+
+.side-img {
+  filter: grayscale(100%);
+}
+
+.play-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.play-button {
+  background-color: white;
+  border-radius: 9999px;
+  padding: 0.75rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.play-button:hover {
+  background-color: #f3f3f3;
+}
+
+.play-icon {
+  color: #ea580c;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+
+.brand-section {
+  padding: 2rem 1rem;
+  /* background-color: #f4f4f5; */
+  display: flex;
+  justify-content: center;
+}
+
+.brand-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.brand-card {
+  /* background: #fff; */
+  padding: 1rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.brand-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1);
+}
+
+.brand-logo {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+

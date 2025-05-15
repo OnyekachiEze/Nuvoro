@@ -3,6 +3,8 @@ import './App.css';
 import HeroSection from './components/HeroSection';
 import ServicesSection from './components/ServicesSection';
 import CoursesTabs from './components/CoursesTabs';
+import TestimonialSection from './components/TestimonialSection';
+import BrandGrid from './components/BrandGrid';
 
 
 // Stats number animation function
@@ -39,6 +41,8 @@ const App = () => {
       <HeroSection  />
       <ServicesSection />
       <CoursesTabs />
+      <TestimonialSection />
+      <BrandGrid />
       
     </div>
   );
