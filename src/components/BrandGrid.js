@@ -22,36 +22,36 @@ export default function BrandGrid() {
                 </div>
             </section>
 
-            <div className="footer-container">
+            <div className="footer-wrapper">
                 <footer className="footer">
-                    <div className="footer-left">
+                    <div className="footer-brand">
                         <img
                             src="logo.png"
                             alt="NuVoro logo"
                             className="footer-logo"
                         />
-                        <p className="footer-description">
+                        <p className="footer-tagline">
                             Revolutionizing Softwares
                             <br />
                             Redefining Standard
                         </p>
                         <div className="footer-socials">
-                            <a href="#" aria-label="Facebook">
+                            <a href="#" aria-label="Facebook" className="facebook">
                                 <i className="fab fa-facebook-f"></i>
                             </a>
-                            <a href="#" aria-label="Instagram">
+                            <a href="#" aria-label="Instagram" className="instagram">
                                 <i className="fab fa-instagram"></i>
                             </a>
-                            <a href="#" aria-label="Twitter">
+                            <a href="#" aria-label="Twitter" className="twitter">
                                 <i className="fab fa-twitter"></i>
                             </a>
-                            <a href="#" aria-label="LinkedIn">
+                            <a href="#" aria-label="LinkedIn" className="linkedin">
                                 <i className="fab fa-linkedin-in"></i>
                             </a>
                         </div>
                     </div>
 
-                    <div className="footer-right">
+                    <div className="footer-links">
                         <div className="footer-column">
                             <h3>Navigation</h3>
                             <ul>
@@ -79,10 +79,8 @@ export default function BrandGrid() {
                                 <li>Nuvoro@info.com</li>
                                 <li>+234-123456789</li>
                                 <li>
-                                    4 Adeola Street
-                                    <br />
-                                    Victoria Island
-                                    <br />
+                                    4 Adeola Street <br />
+                                    Victoria Island <br />
                                     Lagos
                                 </li>
                             </ul>
@@ -90,6 +88,7 @@ export default function BrandGrid() {
                     </div>
                 </footer>
             </div>
+
 
 
         </div>
