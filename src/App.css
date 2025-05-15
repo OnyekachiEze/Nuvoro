@@ -10,7 +10,6 @@
 body {
   font-family: 'Outfit', sans-serif;
   background-color: #EFEFEF;
-
   color: #fff;
 }
 
@@ -734,7 +733,7 @@ body {
   flex-wrap: wrap;
 }
 
-.read-more-btn,
+.read-more-btnn,
 .register-btn {
   font-size: 0.875rem;
   font-weight: 600;
@@ -744,13 +743,13 @@ body {
   transition: all 0.3s ease;
 }
 
-.read-more-btn {
+.read-more-btnn {
   background-color: #f72f6f;
   color: white;
   border: none;
 }
 
-.read-more-btn:hover {
+.read-more-btnn:hover {
   background-color: #e02666;
 }
 
@@ -1087,7 +1086,7 @@ body {
 
 
 .footer-wrapper {
-  background: linear-gradient(to right, #00d8ff, #0f172a);
+  background: linear-gradient(to right, #00E5FF, #1C1C3A);
   padding: 40px 20px;
   font-family: 'Roboto', sans-serif;
   color: white;
@@ -1116,6 +1115,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
+  margin-left: 3rem;
 }
 
 .footer-logo {
@@ -1183,12 +1183,15 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
+  margin-top: 0.7rem;
 }
 
 .footer-column li {
   margin-bottom: 0.5rem;
   color: #d1d5db;
   font-size: 0.9rem;
+  margin-top: 0.9rem;
+  transition: color 0.3s;
 }
 
 .footer-column li:hover {

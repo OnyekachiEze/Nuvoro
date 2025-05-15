@@ -39,7 +39,7 @@ const ServicesSection = () => {
                     Nuvoro Academy is a premier tech education initiative designed to equip aspiring developers and designers with in-demand skills through hands-on, industry-aligned training. Our bootcamp bridges the gap between talent and opportunity, empowering students to thrive in the digital economy.
                 </p>
                 <div className="button-container">
-                    <button className="read-more-btn">Read More</button>
+                    <button className="read-more-btnn">Read More</button>
                     <button className="register-btn">Register</button>
                 </div>
             </section>
