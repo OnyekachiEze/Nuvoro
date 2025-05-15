@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -1080,3 +1081,88 @@ body {
 }
 
 
+.footer-container {
+  background: linear-gradient(to right, #06b6d4, #0f172a);
+  padding: 3rem 1rem;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 1200px;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.footer-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.footer-logo {
+  width: 100px;
+  height: auto;
+}
+
+.footer-description {
+  font-size: 0.9rem;
+  max-width: 180px;
+  line-height: 1.6;
+}
+
+.footer-socials a {
+  margin-right: 1rem;
+  font-size: 1.2rem;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.footer-socials a:hover {
+  color: #06b6d4;
+}
+
+.footer-right {
+  flex: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  font-size: 0.9rem;
+}
+
+.footer-column {
+  min-width: 150px;
+}
+
+.footer-column h3 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column li {
+  margin-bottom: 0.5rem;
+  color: #cbd5e1;
+}
+
+.footer-column li:hover {
+  color: #fff;
+  cursor: pointer;
+}

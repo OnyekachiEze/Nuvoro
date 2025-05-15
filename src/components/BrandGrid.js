@@ -26,7 +26,7 @@ export default function BrandGrid() {
                 <footer className="footer">
                     <div className="footer-left">
                         <img
-                            src="https://storage.googleapis.com/a1aa/image/5e3fea55-3d2f-42bf-1a37-994fb01647c5.jpg"
+                            src="logo.png"
                             alt="NuVoro logo"
                             className="footer-logo"
                         />
