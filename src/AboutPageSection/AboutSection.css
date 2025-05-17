@@ -112,7 +112,7 @@
 .text-section {
   flex: 1;
   line-height: 3rem;
-  max-width: 35rem; /* about 576px */
+  max-width: 36rem; /* about 576px */
 }
 
 .text-section h2 {
