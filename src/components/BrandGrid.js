@@ -1,26 +1,28 @@
 import React from "react";
 
-const brands = [
-    { id: 1, name: "PayTrackr", img: "/band1.png" },
-    { id: 2, name: "Walletia", img: "/band2.png" },
-    { id: 3, name: "Signal", img: "/band3.png" },
-    { id: 4, name: "Fusion", img: "/band4.png" },
-    { id: 5, name: "Doen", img: "/band5.png" },
-    { id: 6, name: "Nextgen", img: "/band6.png" },
+const images = [
+    "band1.png",
+    "band2.png",
+    "band3.png",
+    "band4.png",
+    "band5.png",
+    "band6.png",
 ];
 
 export default function BrandGrid() {
     return (
         <div>
-            <section className="brand-section">
-                <div className="brand-grid">
-                    {brands.map((brand) => (
-                        <div className="brand-card" key={brand.id}>
-                            <img src={brand.img} alt={brand.name} className="brand-logo" />
-                        </div>
-                    ))}
+            <div className="image-marquee-wrapper">
+                <div className="image-marquee">
+                    <div className="image-track">
+                        {[...images, ...images].map((src, index) => (
+                            <div className="image-item" key={index}>
+                                <img src={src} alt={`Logo ${index}`} />
+                            </div>
+                        ))}
+                    </div>
                 </div>
-            </section>
+            </div>
 
             <div className="footer-wrapper">
                 <footer className="footer">
