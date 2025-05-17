@@ -19,7 +19,7 @@ const HeroSection = () => {
 
                     <nav id="nav-links" className={menuOpen ? 'nav-open' : ''}>
                         <a href="#">Home</a>
-                        <a href="#">About us</a>
+                        <a href="/about">About us</a>
                         <a href="#">Services</a>
                         <a href="#">Academy</a>
                         <a href="#">Portfolio</a>
@@ -49,14 +49,14 @@ const HeroSection = () => {
                             <br />
                             <span className="line-3">Software Solutions</span>
                         </h1>
-                        <div className="buttons">
+                        {/* <div className="buttons">
                             <a href="#" className="btn neon">
                                 Get Started
                             </a>
                             <a href="#" className="btn glass">
                                 Login
                             </a>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </section>

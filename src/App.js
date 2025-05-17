@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
-import HeroSection from './components/HeroSection';
-import ServicesSection from './components/ServicesSection';
-import CoursesTabs from './components/CoursesTabs';
-import TestimonialSection from './components/TestimonialSection';
-import BrandGrid from './components/BrandGrid';
+import HomePage from './components/HomePage';
+import AboutPage from './AboutPageSection/AboutPage';
+
+
 
 
 // Stats number animation function
@@ -36,15 +36,15 @@ const App = () => {
     setTimeout(() => animateNumber(setPartnerCount, 14, 1500), 1100);
   }, []);
 
+  
+
   return (
-    <div>
-      <HeroSection  />
-      <ServicesSection />
-      <CoursesTabs />
-      <TestimonialSection />
-      <BrandGrid />
-      
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/home" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+      </Routes>
+    </Router>
   );
 };
 
