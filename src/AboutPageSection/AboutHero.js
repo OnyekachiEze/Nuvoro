@@ -50,8 +50,8 @@ const AboutHero = () => {
                     <nav id="nav-links" className={menuOpen ? 'nav-open' : ''}>
                         <a href="./">Home</a>
                         <a href="/about">About us</a>
-                        <a href="#">Services</a>
-                        <a href="#">Academy</a>
+                        <a href="/services">Services</a>
+                        <a href="/academy">Academy</a>
                         <a href="#">Portfolio</a>
                         <a href="#">Blog</a>
                         <a href="#" className="btn neon">
@@ -152,7 +152,27 @@ const AboutHero = () => {
 
 
 
+            <div className="core-values-wrapper">
+                <div className="core-values-container">
+                    <div className="left-column">
+                        <div className="value-box">Innovation & Vision</div>
+                        <div className="value-box">Human-Centric Tech</div>
+                        <div className="value-box">Skill Development</div>
+                        <div className="value-box">Collaboration & Openness</div>
+                    </div>
 
+                    <div className="center-box">
+                        CORE VALUES
+                    </div>
+
+                    <div className="right-column">
+                        <div className="value-box">Reliability & Trust</div>
+                        <div className="value-box">Impact-Driven</div>
+                        <div className="value-box">User-Centered Thinking</div>
+                        <div className="value-box">Empathy & Responsibility</div>
+                    </div>
+                </div>
+            </div>
 
 
         </div>
