@@ -1,40 +1,13 @@
 import React, { useState } from 'react';
-import logo from '../assets/logo.png';
+import Navbar from './Navbar';
 
 
 const HeroSection = () => {
-    const [menuOpen, setMenuOpen] = useState(false);
-
-    const toggleMenu = () => setMenuOpen(!menuOpen);
 
     return (
         <div>
             <section className="hero-section">
-                <header className="glass-header">
-                    <div className="logo">
-                        <img src={logo} alt="Logo" />
-
-                    </div>
-
-
-                    <nav id="nav-links" className={menuOpen ? 'nav-open' : ''}>
-                        <a href="#">Home</a>
-                        <a href="/about">About us</a>
-                        <a href="/services">Services</a>
-                        <a href="/academy">Academy</a>
-                        <a href="#">Portfolio</a>
-                        <a href="/blog">Blog</a>
-                        <a href="#" className="btn neon">
-                            Get Started
-                        </a>
-                    </nav>
-                    <div className={`menu-toggle ${menuOpen ? 'active' : ''}`} onClick={toggleMenu}>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-
-                </header>
+                <Navbar />
 
                 <div
                     className="hero"

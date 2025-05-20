@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import logo from '../assets/logo.png';
+import Navbar from '../components/Navbar';
 
 const services = [
     "Software Development",
@@ -64,31 +65,7 @@ const ServiceHome = () => {
     return (
         <div>
             <div className="services-hero">
-                <header className="glass-header">
-                    <div className="logo">
-                        <img src={logo} alt="Logo" />
-
-                    </div>
-
-
-                    <nav id="nav-links" className={menuOpen ? 'nav-open' : ''}>
-                        <a href="./">Home</a>
-                        <a href="/about">About us</a>
-                        <a href="/services">Services</a>
-                        <a href="/academy">Academy</a>
-                        <a href="#">Portfolio</a>
-                        <a href="/blog">Blog</a>
-                        <a href="#" className="btn neon" id='ready'>
-                            Get Started
-                        </a>
-                    </nav>
-                    <div className={`menu-toggle ${menuOpen ? 'active' : ''}`} onClick={toggleMenu}>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-
-                </header>
+                <Navbar />
                 <section className="services-section">
 
                     <div className="text-area">
@@ -112,14 +89,14 @@ const ServiceHome = () => {
                     <div className="services-gridd">
                         {services.map((service, index) => (
                             <div
-                                
+
                                 className="service-cardd"
                                 key={index}
                                 style={{ '--i': index }}
                                 dangerouslySetInnerHTML={{
                                     __html: service.replace(' & ', '<br />& ').replace(' Development', '<br />Development').replace(' Design', '<br />Design')
                                 }}
-                             />
+                            />
                         ))}
 
                     </div>

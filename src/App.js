@@ -6,6 +6,8 @@ import AboutPage from './AboutPageSection/AboutPage';
 import ServicesPage from './ServicesPageSection/ServicePage';
 import AcademyPage from './AcademySection/AcademyPage';
 import BlogPage from './BlogPage/BlogPage';
+import SignupPage from './Form/SignupPage';
+import LoginForm from './Form/LoginForm';
 
 
 
@@ -51,6 +53,9 @@ const App = () => {
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/academy" element={<AcademyPage />} />
         <Route path="/blog" element={<BlogPage />} />
+        <Route path="/signup" element={<SignupPage />} />
+        <Route path="/login" element={<LoginForm />} />
+    
       </Routes>
     </Router>
   );

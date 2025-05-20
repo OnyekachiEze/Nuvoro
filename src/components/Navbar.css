@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  width: 100%;
+  /* position: fixed; */
+  top: 0;
+  z-index: 1000;
+  background: rgba(101, 95, 95, 0.8) ;
+  backdrop-filter: blur(10px);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+}
+
+/* Logo */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-logo img {
+  width: 40px;
+}
+
+/* Desktop nav links */
+.navbar-links-desktop {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+}
+
+.navbar-links-desktop li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar-links-desktop li a:hover {
+  color: #ff2e7e;
+}
+
+/* Get Started desktop button */
+.get-started-btn-desktop {
+  background-color: #ff2e7e;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.get-started-btn-desktop:hover {
+  background-color: #e91e63;
+}
+
+/* Hamburger toggle button */
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+/* Overlay for mobile nav */
+.navbar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: height 0.4s ease;
+  z-index: 999;
+}
+
+.navbar-overlay.open {
+  height: 100vh;
+}
+
+/* Close button in overlay */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Mobile links */
+.navbar-links-mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  text-align: center;
+}
+
+.navbar-links-mobile a {
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+}
+
+.navbar-links-mobile a:hover {
+  color: #ff2e7e;
+}
+
+.get-started-btn {
+  margin-top: 20px;
+  background-color: #ff2e7e;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Responsive Rules */
+@media (max-width: 768px) {
+    .navbar {
+        position: relative;
+    }
+  .navbar-links-desktop,
+  .get-started-btn-desktop {
+    display: none;
+  }
+
+  .navbar-toggle {
+    display: flex;
+  }
+}

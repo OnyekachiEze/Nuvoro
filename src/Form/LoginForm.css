@@ -1,0 +1,91 @@
+/* Reuse styling from SignupForm with slight tweaks for login */
+.login-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  color: white;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.left-panel {
+  max-width: 400px;
+}
+
+.left-panel h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.left-panel p {
+  font-size: 0.9rem;
+  color: #cdd6f3;
+  margin-top: 1rem;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 2rem;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  width: 320px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.input-group .icon {
+  color: white;
+  margin-right: 0.75rem;
+  font-size: 1.2rem;
+}
+
+.input-group input {
+  border: none;
+  outline: none;
+  background: transparent;
+  flex: 1;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.input-group input::placeholder {
+  color: #e0e0e0;
+}
+
+.error-message {
+  background-color: rgba(255, 0, 0, 0.1);
+  color: #ff4d4d;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.login-form button {
+  background-color: rgba(0, 0, 0, 0.25);
+  border: none;
+  padding: 0.75rem;
+  color: white;
+  font-weight: bold;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-form button:hover {
+  background-color: rgba(0, 0, 0, 0.35);
+}

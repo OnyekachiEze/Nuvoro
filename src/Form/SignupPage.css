@@ -1,0 +1,124 @@
+/* Base Page Styling */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+  background: url(./signup.png) no-repeat center center/cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 50vh;
+  width: 100vw;
+  align-items: center;
+
+}
+
+/* Main Container */
+.signup-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+
+  color: white;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+/* Left Panel Styling */
+.left-panel {
+  max-width: 500px;
+}
+
+.left-panel h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.left-panel p {
+  font-size: 1.2rem;
+  color: #cdd6f3;
+  margin-top: 1rem;
+}
+
+/* Signup Form Container */
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 2rem;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  width: 320px;
+}
+
+/* Input Group with Icons */
+.input-group {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.input-group .iicon {
+  color: #2669A1;
+  margin-right: 0.75rem;
+  font-size: 1.2rem;
+}
+
+.input-group input {
+  border: none;
+  outline: none;
+  background: transparent;
+  flex: 1;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.input-group input::placeholder {
+  color: #2669A1;
+}
+
+/* Checkbox Terms */
+.terms {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.2rem;
+  font-size: 0.85rem;
+  color: #2669A1;
+}
+
+.terms input {
+  margin-right: 0.5rem;
+}
+
+/* Submit Button */
+.signup-form button {
+  background-color: #2669A1;
+  border: none;
+  padding: 0.75rem;
+  color: #1C1C3A;
+  font-weight: bold;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.signup-form button:hover {
+  background-color: rgba(0, 0, 0, 0.35);
+}
+
+.error-message {
+  background-color: rgba(255, 0, 0, 0.1);
+  color: #ff4d4d;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  text-align: center;
+}
