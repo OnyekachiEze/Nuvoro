@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import logo from '../assets/logo.png';
+import { motion } from 'framer-motion';
 import './Academy.css';
 
 
@@ -89,6 +90,59 @@ const facilities = [
         image: '../Group 17.png',
     },
 ];
+
+
+const testimonials = [
+    {
+        name: 'Veronica',
+        role: 'UI/UX Designer',
+        image: '/student1.png',
+        text: `Studying UI/UX at Nuvoro has been transformative—expert instructors, hands-on projects, and a collaborative environment made learning engaging and practical. The program’s real-world focus and constructive feedback significantly boosted my design skills.`
+    },
+    {
+        name: 'Charles',
+        role: 'Full Stack Developer',
+        image: '/student2.png',
+        text: `Studying Full Stack Development at Nuvoro has been a game-changer for me! The curriculum is hands-on and up to-date, and the instructors provide incredible support. I’ve gained real-world skills that have already boosted my confidence and career prospects.`
+    },
+    {
+        name: 'Victor',
+        role: 'Cloud Computing',
+        image: '/student3.png',
+        text: `Transitioning from banking to cloud engineering seemed daunting, but Nuvoro made it seamless with their structured curriculum and hands-on training. The instructors were incredibly supportive, breaking down complex concepts into digestible lessons.`
+    },
+    {
+        name: 'Ikenna',
+        role: 'Back End Developer',
+        image: '/student4.png',
+        text: `Enrolling in Nuvoro’s Backend Development program has been transformative. The practical curriculum, expert instructors, and industry-aligned projects have equipped me with in-demand skills and confidence. I recommend Nuvoro Academy.`
+    },
+    {
+        name: 'Deborah',
+        role: 'UI/UX Designer',
+        image: '/student5.png',
+        text: `I started Nuvoro with zero knowledge about what I am transitioning into and not being sure about my decision. Now, based on what I’ve learnt I am taking things head on with UI Designing. I mean from not knowing what whitespace was to knowing my left and right in design.`
+    },
+    {
+        name: 'Blessing',
+        role: 'Product Design',
+        image: '/student6.png',
+        text: `Studying Product Design at Nuvoro has been a transformative experience. The hands-on projects, expert mentorship, and industry-relevant curriculum have sharpened my skills and creativity. I highly recommend Nuvoro to anyone serious about excelling in product design.`
+    }
+];
+
+const cardVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: (i) => ({
+        opacity: 1,
+        y: 0,
+        transition: {
+            delay: i * 0.15,
+            duration: 0.6,
+            ease: 'easeOut',
+        }
+    })
+};
 
 
 const AcademyHome = () => {
@@ -449,6 +503,33 @@ const AcademyHome = () => {
                     className="cohort-image2"
                 />
             </div>
+
+
+            <section className="testimonials-sectionn">
+                <h2 className="section-titlee">What Our Students Say</h2>
+                <div className="testimonials-gridd">
+                    {testimonials.map((student, index) => (
+                        <motion.article
+                            className="testimonial-cardd"
+                            key={index}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.3 }}
+                            variants={cardVariants}
+                            custom={index}
+                        >
+                            <div className="student-info">
+                                <img src={student.image} alt={`Portrait of ${student.name}`} className="student-image" />
+                                <div>
+                                    <h3 className="student-name">{student.name}</h3>
+                                    <p className="student-role">{student.role}</p>
+                                </div>
+                            </div>
+                            <p className="testimonial-textt">{student.text}</p>
+                        </motion.article>
+                    ))}
+                </div>
+            </section>
 
         </div >
     )
