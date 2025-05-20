@@ -167,9 +167,9 @@ const AcademyHome = () => {
                         <a href="./">Home</a>
                         <a href="/about">About us</a>
                         <a href="/services">Services</a>
-                        <a href="#">Academy</a>
+                        <a href="/academy">Academy</a>
                         <a href="#">Portfolio</a>
-                        <a href="#">Blog</a>
+                        <a href="/blog">Blog</a>
                         <a href="#" className="btn neon" id='ready'>
                             Get Started
                         </a>

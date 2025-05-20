@@ -53,7 +53,7 @@ const AboutHero = () => {
                         <a href="/services">Services</a>
                         <a href="/academy">Academy</a>
                         <a href="#">Portfolio</a>
-                        <a href="#">Blog</a>
+                        <a href="/blog">Blog</a>
                         <a href="#" className="btn neon">
                             Get Started
                         </a>

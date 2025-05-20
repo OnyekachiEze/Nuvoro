@@ -210,6 +210,12 @@
         margin-top: 2rem;
         font-size: 1.2rem;
     }
+
+    .tech-image {
+        width: 100%;
+        margin-top: 1rem;
+        /* height: 80px; */
+    }
 }
 
 @media (max-width: 480px) {
@@ -239,100 +245,398 @@
 
 
 .testimonials-container {
-  /* max-width: 80rem; same as max-w-5xl */
-  margin: 0 auto;
+    /* max-width: 80rem; same as max-w-5xl */
+    margin: 0 auto;
 }
 
 .section-title {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #1e2541;
-  margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1e2541;
+    margin-bottom: 1.5rem;
 }
 
 /* Scrolling wrapper */
 .scrolling-wrapper {
-  display: flex;
-  gap: 1.5rem;
-  overflow-x: hidden; /* hide scrollbar */
-  animation: scroll-left 30s linear infinite;
-  /* prevent vertical scroll */
-  padding-bottom: 1rem;
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: hidden;
+    /* hide scrollbar */
+    animation: scroll-left 30s linear infinite;
+    /* prevent vertical scroll */
+    padding-bottom: 1rem;
 }
 
 /* Testimonial card */
 .testimonial-card {
-  flex: 0 0 320px;
-  border-radius: 1rem;
-  display: flex;
-  flex-direction: column;
-  color: white;
-  box-shadow: 0 4px 10px rgb(0 0 0 / 0.15);
-  user-select: none;
+    flex: 0 0 320px;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    box-shadow: 0 4px 10px rgb(0 0 0 / 0.15);
+    user-select: none;
 }
 
 /* Header with image and name */
 .testimonial-header {
-  padding: 1.5rem 1.5rem 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    padding: 1.5rem 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .testimonial-img {
-  width: 112px;
-  height: 112px;
-  border-radius: 9999px;
-  object-fit: cover;
+    width: 112px;
+    height: 112px;
+    border-radius: 9999px;
+    object-fit: cover;
 }
 
 .testimonial-name {
-  margin-top: 0.75rem;
-  font-size: 1.125rem;
-  font-weight: 600;
-  align-self: flex-start;
+    margin-top: 0.75rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    align-self: flex-start;
 }
 
 /* Body with quote, stars, and text */
 .testimonial-body {
-  background-color: #1e2541;
-  border-radius: 0 0 1rem 1rem;
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+    background-color: #1e2541;
+    border-radius: 0 0 1rem 1rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 .quote-icon {
-  color: #3de0f0;
-  font-size: 2rem;
-  margin-bottom: -0.5rem;
+    color: #3de0f0;
+    font-size: 2rem;
+    margin-bottom: -0.5rem;
 }
 
 .stars {
-  display: flex;
-  gap: 0.25rem;
-  color: #facc15;
-  font-size: 1.125rem;
+    display: flex;
+    gap: 0.25rem;
+    color: #facc15;
+    font-size: 1.125rem;
 }
 
 .star-yellow {
-  color: #facc15;
+    color: #facc15;
 }
 
 .testimonial-text {
-  font-size: 0.875rem;
-  line-height: 1.5;
-  color: white;
-  user-select: text;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: white;
+    user-select: text;
 }
 
 /* Animation keyframes */
 @keyframes scroll-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+
+
+
+
+/* Medium screens (tablets and small desktops) */
+@media (max-width: 768px) {
+    .industries-section {
+        padding: 2rem 1rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .industries-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        max-width: 100%;
+        margin: 0 1rem;
+    }
+
+    .industry-card.large {
+        grid-row: auto;
+        /* remove spanning on smaller screens */
+    }
+
+    .industry-image {
+        height: 140px;
+    }
+
+    .industry-image.true {
+        height: 260px;
+    }
+
+    .industry-card.healthcare {
+        margin-top: 3rem;
+    }
+
+    .industry-card.education {
+        height: auto;
+    }
+
+    .industry-card.finance {
+        margin-top: 1rem;
+    }
+
+    .industry-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .industry-content p {
+        font-size: 1rem;
+    }
+
+    .arrow {
+        font-size: 1rem;
+        bottom: 0.5rem;
+        right: 0.5rem;
+    }
+
+    /* Nuvoro container adjustments */
+    .nuvoro-container {
+        max-width: 100%;
+        padding: 16px;
+    }
+
+    .nuvoro-title {
+        font-size: 2rem;
+    }
+
+    .nuvoro-subtitle {
+        font-size: 1rem;
+    }
+
+    .nuvoro-box {
+        min-width: 100%;
+        border-radius: 4px;
+    }
+
+    .nuvoro-row {
+        padding: 10px 12px;
+    }
+
+    .nuvoro-label {
+        font-size: 1rem;
+        min-width: 150px;
+    }
+
+    .nuvoro-content {
+        margin-left: 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    /* Technology section */
+    .technology-section {
+        margin: 0 1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        margin-top: 1.5rem;
+    }
+
+    .tech-grid {
+        gap: 2rem;
+        justify-content: center;
+    }
+
+    .tech-title {
+        font-size: 1.2rem;
+        margin-top: 2rem;
+        min-width: 120px;
+    }
+
+    /* Testimonials */
+    .testimonial-card {
+        flex: 0 0 280px;
+    }
+
+    .testimonial-name {
+        font-size: 1rem;
+    }
+
+    .testimonial-text {
+        font-size: 0.8rem;
+    }
+}
+
+/* Small screens (phones) */
+@media (max-width: 480px) {
+    .industries-section {
+        padding: 1.5rem 0.5rem;
+    }
+
+    .section-title {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+
+    .industries-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin: 0 0.5rem;
+    }
+
+    .industry-image {
+        height: 120px;
+    }
+
+    .industry-image.true {
+        height: 220px;
+    }
+
+    .industry-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .industry-content p {
+        font-size: 0.9rem;
+    }
+
+    .arrow {
+        font-size: 0.9rem;
+        bottom: 0.3rem;
+        right: 0.3rem;
+    }
+
+    .nuvoro-container {
+        padding: 12px;
+    }
+
+    .nuvoro-title {
+        font-size: 1.6rem;
+    }
+
+    .nuvoro-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .nuvoro-label {
+        font-size: 0.9rem;
+        min-width: 100px;
+    }
+
+    .nuvoro-content {
+        margin-left: 1rem;
+        font-size: 0.85rem;
+    }
+
+    .technology-section {
+        margin: 0 0.5rem;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+        margin-top: 1rem;
+    }
+
+    .tech-grid {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .tech-title {
+        font-size: 1rem;
+        margin-top: 1.5rem;
+        min-width: auto;
+    }
+
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Media Queries */
+
+/* Mobile phones (up to 480px) */
+@media (max-width: 480px) {
+    .scrolling-wrapper {
+        flex-wrap: nowrap;
+        animation: none; /* Stop scrolling on small screens for usability */
+        overflow-x: auto; /* Allow horizontal scroll */
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    }
+
+    .testimonial-card {
+        flex: 0 0 260px; /* Smaller cards */
+    }
+
+    .testimonial-img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .testimonial-name {
+        font-size: 1rem;
+    }
+
+    .testimonial-text {
+        font-size: 0.8rem;
+    }
+}
+
+/* Tablets (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .scrolling-wrapper {
+        animation-duration: 40s; /* Slow down animation a bit */
+    }
+
+    .testimonial-card {
+        flex: 0 0 280px;
+    }
+
+    .testimonial-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .testimonial-name {
+        font-size: 1.05rem;
+    }
+
+    .testimonial-text {
+        font-size: 0.85rem;
+    }
+}
+
+/* Smaller desktops and up (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .testimonial-card {
+        flex: 0 0 300px;
+    }
+
+    .testimonial-img {
+        width: 110px;
+        height: 110px;
+    }
+
+    .testimonial-name {
+        font-size: 1.1rem;
+    }
+
+    .testimonial-text {
+        font-size: 0.9rem;
+    }
 }

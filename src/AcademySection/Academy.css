@@ -765,3 +765,50 @@
 .fade-in {
   animation: fadeInUp 0.8s ease forwards;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+:root {
+    --primary: #1a254f;
+    --accent: #7a7d9a;
+    --light-bg: #f6f6f9;
+}
+
+.welcome-title {
+    color: var(--primary);
+}
+
+.track-header {
+    background-color: var(--accent);
+}
+
+@media (max-width: 480px) {
+  .welcome-title {
+      font-size: 2rem;
+  }
+
+  .about-image {
+      width: 100%;
+      height: auto;
+  }
+}
+
+
+
+.course-card, .apply-button, .video-image {
+    transition: all 0.3s ease-in-out;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}

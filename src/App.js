@@ -5,6 +5,7 @@ import HomePage from './components/HomePage';
 import AboutPage from './AboutPageSection/AboutPage';
 import ServicesPage from './ServicesPageSection/ServicePage';
 import AcademyPage from './AcademySection/AcademyPage';
+import BlogPage from './BlogPage/BlogPage';
 
 
 
@@ -49,6 +50,7 @@ const App = () => {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/academy" element={<AcademyPage />} />
+        <Route path="/blog" element={<BlogPage />} />
       </Routes>
     </Router>
   );

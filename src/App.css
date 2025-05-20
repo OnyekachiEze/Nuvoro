@@ -1205,12 +1205,12 @@ body {
 .footer-socials a {
   color: white;
   border-radius: 50%;
-  padding: 8px;
+  padding: 18px;
   margin-right: 1rem;
   align-items: center;
   justify-content: center;
   width: 32px;
-  height: 32px;
+  /* height: px; */
 }
 
 .footer-socials a:hover {
@@ -1269,3 +1269,26 @@ body {
   color: white;
   cursor: pointer;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
