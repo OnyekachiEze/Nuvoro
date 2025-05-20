@@ -48,6 +48,9 @@ const HeroSection = () => {
                             <span className="line-2">Elegance in</span>
                             <br />
                             <span className="line-3">Software Solutions</span>
+                            <br />
+                            <span className="line-4">and Tech Skills Development</span>
+                            
                         </h1>
                         {/* <div className="buttons">
                             <a href="#" className="btn neon">

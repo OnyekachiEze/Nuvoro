@@ -1,6 +1,7 @@
 import React from 'react'
 // import React, { useState, useEffect } from 'react';
 import '../App.css';
+
 import HeroSection from '../components/HeroSection';
 import ServicesSection from '../components/ServicesSection';
 import CoursesTabs from '../components/CoursesTabs';

@@ -109,16 +109,17 @@ const ServiceHome = () => {
                 <div className="services-inner">
                     <h2 className="services-heading">Services We Offer</h2>
                     <p className="services-subheading">Empower businesses and build future-ready talent</p>
-                    <div className="services-grid">
+                    <div className="services-gridd">
                         {services.map((service, index) => (
                             <div
-                                className="service-card"
+                                
+                                className="service-cardd"
                                 key={index}
                                 style={{ '--i': index }}
                                 dangerouslySetInnerHTML={{
                                     __html: service.replace(' & ', '<br />& ').replace(' Development', '<br />Development').replace(' Design', '<br />Design')
                                 }}
-                            />
+                             />
                         ))}
 
                     </div>
