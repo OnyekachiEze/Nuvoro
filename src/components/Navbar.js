@@ -21,11 +21,11 @@ const Navbar = () => {
                     <li><a href="/about">About us</a></li>
                     <li><a href="/services">Services</a></li>
                     <li><a href="/academy">Academy</a></li>
-                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="/portfolio">Portfolio</a></li>
                     <li><a href="/blog">Blog</a></li>
                 </ul>
 
-                <button className="get-started-btn-desktop">Get Started</button>
+                <button className="get-started-btn-desktop"><a href="/login">Get Started</a></button>
 
                 <div className="navbar-toggle" onClick={toggleMenu}>
                     <div className="bar" />

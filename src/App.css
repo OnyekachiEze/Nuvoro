@@ -398,25 +398,25 @@ body {
   font-size: 16px;
 }
 
-.services-grid {
+.servvices-grid {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 24px;
 }
 
 @media (min-width: 768px) {
-  .services-grid {
+  .servvices-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (min-width: 1024px) {
-  .services-grid {
+  .servvices-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-.service-card {
+.servvice-card {
   display: flex;
   flex-direction: column;
   background-color: white;
@@ -427,13 +427,13 @@ body {
   transition: all 0.3s ease;
 }
 
-.service-card:hover {
+.servvice-card:hover {
   background-color: #374a99;
   border-color: #374a99;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
-.card-header {
+.carrd-header {
   display: flex;
   flex-direction: column;
   padding: 24px 24px 0;
@@ -452,11 +452,11 @@ body {
   transition: background-color 0.3s ease;
 }
 
-.service-card:hover .icon-container {
+.servvice-card:hover .icon-container {
   background-color: #2d3f85;
 }
 
-.service-icon {
+.servvice-icon {
   width: 24px;
   height: 24px;
   display: block;
@@ -468,11 +468,11 @@ body {
   transition: stroke 0.3s ease;
 }
 
-.service-card:hover .service-icon {
+.servvice-card:hover .servvice-icon {
   stroke: white;
 }
 
-.service-title {
+.servvice-title {
   color: #1a2242;
   font-size: 18px;
   font-weight: 700;
@@ -480,11 +480,11 @@ body {
   transition: color 0.3s ease;
 }
 
-.service-card:hover .service-title {
+.servvice-card:hover .servvice-title {
   color: white;
 }
 
-.card-content {
+.carrd-content {
   flex-grow: 1;
   padding: 16px 24px 24px;
   font-size: 14px;
@@ -493,11 +493,11 @@ body {
   transition: color 0.3s ease;
 }
 
-.service-card:hover .card-content {
+.servvice-card:hover .carrd-content {
   color: #f3f4f6;
 }
 
-.card-footer {
+.carrd-footer {
   display: flex;
   align-items: center;
   padding: 8px 24px 16px;
@@ -524,13 +524,13 @@ body {
   background-color: #f9fafb;
 }
 
-.service-card:hover .read-more-btn {
+.servvice-card:hover .read-more-btn {
   color: white;
   background-color: transparent;
   border-color: white;
 }
 
-.service-card:hover .read-more-btn:hover {
+.servvice-card:hover .read-more-btn:hover {
   background-color: #2d3f85;
 }
 
@@ -561,13 +561,13 @@ body {
   margin-bottom: 0.375rem;
 }
 
-.title {
+.tittle {
   font-size: 1.75rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
 }
 
-.description {
+.ddescription {
   font-size: 1rem;
   margin-bottom: 2rem;
   line-height: 1.75;

@@ -41,7 +41,7 @@ const SignupPage = () => {
 
 
   return (
-    <div>
+    <div className="body">
       <Navbar />
       <div className="signup-container">
         <div className="left-panel">

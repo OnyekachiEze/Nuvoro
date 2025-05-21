@@ -8,6 +8,8 @@ import AcademyPage from './AcademySection/AcademyPage';
 import BlogPage from './BlogPage/BlogPage';
 import SignupPage from './Form/SignupPage';
 import LoginForm from './Form/LoginForm';
+import PortfolioPage from './PortfolioPage/PortfolioPage';
+
 
 
 
@@ -55,6 +57,7 @@ const App = () => {
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/login" element={<LoginForm />} />
+        <Route path="/portfolio" element={<PortfolioPage />} />
     
       </Routes>
     </Router>

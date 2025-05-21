@@ -19,8 +19,7 @@ const services = [
 
 
 const ServiceHome = () => {
-    const [menuOpen, setMenuOpen] = useState(false);
-    const toggleMenu = () => setMenuOpen(!menuOpen);
+
 
     const [inputValue, setInputValue] = useState('');
 
