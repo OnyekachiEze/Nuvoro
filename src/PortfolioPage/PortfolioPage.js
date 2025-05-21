@@ -39,7 +39,7 @@ const customers = [
         description: 'Paytrackr, a fintech company dedicated to financial solutions',
         userImg: './a417fff5e7c94532c89384405c2f7071.png',
         quote:
-            'Partnering with Nuvoro delivered exceptional results at every stage...',
+            'Partnering with Nuvoro delivered exceptional results at every stage. Their expertise in financial technology  standards enabled us to build a robust, high-performance backend for our next-gen auto financial saving and tracking system for our customers.',
         name: 'Julian Zino',
         role: 'CEO',
     },
@@ -50,7 +50,7 @@ const customers = [
         description: 'Healtalk, is a provider of IT solutions for the healthcare industry',
         userImg: './8f23447418ff5e3e048ad43742eaf93a.png',
         quote:
-            'When we needed enterprise-grade infrastructure for our mission-critical SMS platform...',
+            'When we needed enterprise-grade infrastructure for our mission-critical SMS platform, Nuvoro engineered a bulletproof AWS architecture—delivering 99.99% uptime and seamless scalability for millions of global notifications.',
         name: 'Johnson Ebere',
         role: 'Tech Team Head',
     },
@@ -61,20 +61,9 @@ const customers = [
         description: 'Bifirst, a web development company major in e-commerce',
         userImg: './a417fff5e7c94532c89384405c2f7071 (1).png',
         quote:
-            'Our company turned to ScienceSoft for infrastructure management...',
+            'Our company turned to ScienceSoft for infrastructure management of the web application that we offer to our clients for sending SMS notifications. ScienceSoft’s team built a fault-tolerant and highly available AWS-based app infrastructure.',
         name: 'Inyene Richard',
         role: 'Founder and CEO',
-    },
-    {
-        logo: './afcbc0d19732d4e7c62edac125763a9d.png',
-        logoColor: 'text-[#2c7a7b]',
-        stars: 5,
-        description: 'Healtalk, is a provider of IT solutions for the healthcare industry',
-        userImg: './8f23447418ff5e3e048ad43742eaf93a.png',
-        quote:
-            'When we needed enterprise-grade infrastructure for our mission-critical SMS platform...',
-        name: 'Johnson Ebere',
-        role: 'Tech Team Head',
     },
     {
         logo: './Group 17 (1).png',
@@ -83,10 +72,22 @@ const customers = [
         description: 'Paytrackr, a fintech company dedicated to financial solutions',
         userImg: './a417fff5e7c94532c89384405c2f7071.png',
         quote:
-            'Partnering with Nuvoro delivered exceptional results at every stage...',
+            'Partnering with Nuvoro delivered exceptional results at every stage. Their expertise in financial technology  standards enabled us to build a robust, high-performance backend for our next-gen auto financial saving and tracking system for our customers.',
         name: 'Julian Zino',
         role: 'CEO',
     },
+    {
+        logo: './afcbc0d19732d4e7c62edac125763a9d.png',
+        logoColor: 'text-[#2c7a7b]',
+        stars: 5,
+        description: 'Healtalk, is a provider of IT solutions for the healthcare industry',
+        userImg: './8f23447418ff5e3e048ad43742eaf93a.png',
+        quote:
+            'When we needed enterprise-grade infrastructure for our mission-critical SMS platform, Nuvoro engineered a bulletproof AWS architecture—delivering 99.99% uptime and seamless scalability for millions of global notifications.',
+        name: 'Johnson Ebere',
+        role: 'Tech Team Head',
+    },
+
 ];
 
 const PortfolioPage = () => {
@@ -166,13 +167,13 @@ const PortfolioPage = () => {
             </section>
 
             <div className="satisfied-container">
-                <h2 className="title">Our Satisfied Customers</h2>
-                <div className="scroll-wrapper" ref={scrollRef}>
-                    <div className="scroll-content">
+                <h2 className="tiitle">Our Satisfied Customers</h2>
+                <div className="scrooll-wrapper" ref={scrollRef}>
+                    <div className="scrooll-content">
                         {[...customers, ...customers].map((cust, idx) => (
-                            <div className="card" key={idx}>
-                                <div className="card-header">
-                                    <div className="card-logo">
+                            <div className="ccaard" key={idx}>
+                                <div className="cacard-header">
+                                    <div className="cacard-logo">
                                         <img src={cust.logo} alt={cust.company} />
                                         <span className={`company ${cust.logoColor}`}>{cust.company}</span>
                                     </div>
@@ -183,19 +184,27 @@ const PortfolioPage = () => {
                                     </div>
                                 </div>
                                 <p className="desc">
-                                    <strong>{cust.company}</strong>, {cust.description}
+                                    <span className='company-name'>{cust.company}</span> {cust.description}
                                 </p>
                                 <div className="user">
                                     <img src={cust.userImg} alt={cust.name} />
                                 </div>
-                                <p className="quote">
+                                <div className="quote-box">
                                     <i className="fas fa-quote-left"></i> {cust.quote}
-                                </p>
+                                </div>
+
                                 <p className="name">{cust.name}</p>
                                 <p className="role">{cust.role}</p>
                             </div>
                         ))}
                     </div>
+                </div>
+            </div>
+
+            <div className="launch-container">
+                <div className="launch-content">
+                    <p className="launch-text">Have a project? Let’s make it happen</p>
+                    <button className="launch-button">Launch with us</button>
                 </div>
             </div>
 
