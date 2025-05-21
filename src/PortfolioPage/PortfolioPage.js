@@ -33,40 +33,59 @@ const industries = [
 
 const customers = [
     {
-        logo: 'https://storage.googleapis.com/a1aa/image/c9514a66-b5da-41e8-0d24-d4035a1b9f13.jpg',
-        company: 'ayTrackr',
+        logo: './Group 17 (1).png',
         logoColor: 'text-blue-600',
         stars: 5,
         description: 'Paytrackr, a fintech company dedicated to financial solutions',
-        userImg: 'https://storage.googleapis.com/a1aa/image/2f11f446-749c-4fdd-ddae-d550137950c7.jpg',
+        userImg: './a417fff5e7c94532c89384405c2f7071.png',
         quote:
             'Partnering with Nuvoro delivered exceptional results at every stage...',
         name: 'Julian Zino',
         role: 'CEO',
     },
     {
-        logo: 'https://storage.googleapis.com/a1aa/image/2a8b804a-3758-4780-8676-9dbacb173777.jpg',
-        company: 'Healtalk',
+        logo: './afcbc0d19732d4e7c62edac125763a9d.png',
         logoColor: 'text-[#2c7a7b]',
         stars: 5,
         description: 'Healtalk, is a provider of IT solutions for the healthcare industry',
-        userImg: 'https://storage.googleapis.com/a1aa/image/953a0ba1-8036-4431-50a9-6adf4fbb2c6b.jpg',
+        userImg: './8f23447418ff5e3e048ad43742eaf93a.png',
         quote:
             'When we needed enterprise-grade infrastructure for our mission-critical SMS platform...',
         name: 'Johnson Ebere',
         role: 'Tech Team Head',
     },
     {
-        logo: 'https://storage.googleapis.com/a1aa/image/77b2870e-e645-4737-a8b8-9d59c28e17e5.jpg',
-        company: 'bifirst',
+        logo: './Screenshot 2025-05-21 141913.png',
         logoColor: 'text-black',
         stars: 5,
         description: 'Bifirst, a web development company major in e-commerce',
-        userImg: 'https://storage.googleapis.com/a1aa/image/2f11f446-749c-4fdd-ddae-d550137950c7.jpg',
+        userImg: './a417fff5e7c94532c89384405c2f7071 (1).png',
         quote:
             'Our company turned to ScienceSoft for infrastructure management...',
         name: 'Inyene Richard',
         role: 'Founder and CEO',
+    },
+    {
+        logo: './afcbc0d19732d4e7c62edac125763a9d.png',
+        logoColor: 'text-[#2c7a7b]',
+        stars: 5,
+        description: 'Healtalk, is a provider of IT solutions for the healthcare industry',
+        userImg: './8f23447418ff5e3e048ad43742eaf93a.png',
+        quote:
+            'When we needed enterprise-grade infrastructure for our mission-critical SMS platform...',
+        name: 'Johnson Ebere',
+        role: 'Tech Team Head',
+    },
+    {
+        logo: './Group 17 (1).png',
+        logoColor: 'text-blue-600',
+        stars: 5,
+        description: 'Paytrackr, a fintech company dedicated to financial solutions',
+        userImg: './a417fff5e7c94532c89384405c2f7071.png',
+        quote:
+            'Partnering with Nuvoro delivered exceptional results at every stage...',
+        name: 'Julian Zino',
+        role: 'CEO',
     },
 ];
 
@@ -74,28 +93,25 @@ const PortfolioPage = () => {
     const scrollRef = useRef(null);
 
     useEffect(() => {
-        const scrollContainer = scrollRef.current;
-
-        const scrollSpeed = 1; // pixels per frame
+        const container = scrollRef.current;
+        let scrollX = 0;
         let animationFrameId;
 
-        const scroll = () => {
-            if (scrollContainer) {
-                scrollContainer.scrollLeft += scrollSpeed;
-                if (
-                    scrollContainer.scrollLeft + scrollContainer.clientWidth >=
-                    scrollContainer.scrollWidth
-                ) {
-                    scrollContainer.scrollLeft = 0; // reset to beginning
+        const step = () => {
+            scrollX += 0.5; // Speed
+            if (container) {
+                container.scrollLeft = scrollX;
+                if (scrollX >= container.scrollWidth / 2) {
+                    scrollX = 0; // Reset scroll
                 }
             }
-            animationFrameId = requestAnimationFrame(scroll);
+            animationFrameId = requestAnimationFrame(step);
         };
 
-        animationFrameId = requestAnimationFrame(scroll);
-
+        animationFrameId = requestAnimationFrame(step);
         return () => cancelAnimationFrame(animationFrameId);
     }, []);
+
 
 
     return (
@@ -151,33 +167,35 @@ const PortfolioPage = () => {
 
             <div className="satisfied-container">
                 <h2 className="title">Our Satisfied Customers</h2>
-                <div className="cards-scroll auto-scroll" ref={scrollRef}>
-                    {customers.map((cust, idx) => (
-                        <div className="card" key={idx}>
-                            <div className="card-header">
-                                <div className="card-logo">
-                                    <img src={cust.logo} alt={cust.company} />
-                                    <span className={`company ${cust.logoColor}`}>{cust.company}</span>
+                <div className="scroll-wrapper" ref={scrollRef}>
+                    <div className="scroll-content">
+                        {[...customers, ...customers].map((cust, idx) => (
+                            <div className="card" key={idx}>
+                                <div className="card-header">
+                                    <div className="card-logo">
+                                        <img src={cust.logo} alt={cust.company} />
+                                        <span className={`company ${cust.logoColor}`}>{cust.company}</span>
+                                    </div>
+                                    <div className="stars">
+                                        {Array(cust.stars).fill(0).map((_, i) => (
+                                            <i key={i} className="fas fa-star"></i>
+                                        ))}
+                                    </div>
                                 </div>
-                                <div className="stars">
-                                    {Array(cust.stars).fill(0).map((_, i) => (
-                                        <i key={i} className="fas fa-star"></i>
-                                    ))}
+                                <p className="desc">
+                                    <strong>{cust.company}</strong>, {cust.description}
+                                </p>
+                                <div className="user">
+                                    <img src={cust.userImg} alt={cust.name} />
                                 </div>
+                                <p className="quote">
+                                    <i className="fas fa-quote-left"></i> {cust.quote}
+                                </p>
+                                <p className="name">{cust.name}</p>
+                                <p className="role">{cust.role}</p>
                             </div>
-                            <p className="desc">
-                                <strong>{cust.company}</strong>, {cust.description}
-                            </p>
-                            <div className="user">
-                                <img src={cust.userImg} alt={cust.name} />
-                            </div>
-                            <p className="quote">
-                                <i className="fas fa-quote-left"></i> {cust.quote}
-                            </p>
-                            <p className="name">{cust.name}</p>
-                            <p className="role">{cust.role}</p>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
             </div>
 
