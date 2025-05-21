@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 
 import PortfolioHome from './PortfolioHome'
+import Footer from '../components/Footer'
 import './Portfolio.css'
 
 
@@ -207,6 +208,8 @@ const PortfolioPage = () => {
                     <button className="launch-button">Launch with us</button>
                 </div>
             </div>
+
+            <Footer />
 
         </div>
     )

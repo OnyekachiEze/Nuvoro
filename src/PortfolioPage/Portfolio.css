@@ -518,16 +518,16 @@
 }
 
 .quote-box {
-  padding: 0.75rem;
-  /* border-left: 4px solid #60a5fa; */
-  border-radius: 0.375rem;
-  font-size: 0.75rem;
-  color: #3b3b4f;
-  line-height: 1.7rem;
-  margin-bottom: 0.75rem;
-  word-wrap: break-word;
-  white-space: normal;
-  overflow: visible;
+    padding: 0.75rem;
+    /* border-left: 4px solid #60a5fa; */
+    border-radius: 0.375rem;
+    font-size: 0.75rem;
+    color: #3b3b4f;
+    line-height: 1.7rem;
+    margin-bottom: 0.75rem;
+    word-wrap: break-word;
+    white-space: normal;
+    overflow: visible;
 }
 
 
@@ -535,4 +535,54 @@
     font-size: 0.875rem;
     font-weight: bolder;
     color: #1a1a2e;
+}
+
+
+
+.launch-container {
+    background-color: #1B1B33;
+    min-height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}
+
+.launch-content {
+    max-width: 600px;
+}
+
+.launch-text {
+    color: #D9D9D9;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.launch-button {
+    background-color: #FF1E57;
+    color: white;
+    font-size: 0.9rem;
+    padding: 10px 24px;
+    border: none;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.launch-button:hover {
+    background-color: #e61a4f;
+}
+
+@media (min-width: 640px) {
+    .launch-text {
+        font-size: 1.125rem;
+    }
+
+    .launch-button {
+        font-size: 1rem;
+        padding: 12px 32px;
+    }
 }

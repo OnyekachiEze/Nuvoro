@@ -36,11 +36,11 @@ function Footer() {
                         <div className="footer-column">
                             <h3>Navigation</h3>
                             <ul>
-                                <li>Home</li>
-                                <li>About us</li>
-                                <li>Service</li>
-                                <li>Academy</li>
-                                <li>Career</li>
+                                <li><a href="./">Home</a></li>
+                                <li><a href="/about">About us</a></li>
+                                <li><a href="/services">Services</a></li>
+                                <li><a href="/academy">Academy</a></li>
+                                <li><a href="">Career</a></li>
                             </ul>
                         </div>
 

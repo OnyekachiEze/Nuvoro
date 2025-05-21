@@ -1109,6 +1109,11 @@ body {
   font-size: 0.9rem;
   margin-top: 0.9rem;
   transition: color 0.3s;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 }
 
 .footer-column li:hover {
