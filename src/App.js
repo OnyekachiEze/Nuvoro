@@ -9,6 +9,7 @@ import BlogPage from './BlogPage/BlogPage';
 import SignupPage from './Form/SignupPage';
 import LoginForm from './Form/LoginForm';
 import PortfolioPage from './PortfolioPage/PortfolioPage';
+import ApplicationPage from './ApplicationPage/ApplicationPage';
 
 
 
@@ -58,6 +59,7 @@ const App = () => {
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/login" element={<LoginForm />} />
         <Route path="/portfolio" element={<PortfolioPage />} />
+        <Route path="/application" element={<ApplicationPage />} />
     
       </Routes>
     </Router>
