@@ -7,21 +7,21 @@ const AboutHero = () => {
 
     const images = [
         {
-            src: '/story1.png',
+            src: './cropped.png',
             alt: 'Smiling woman at desk',
         },
-        {
-            src: '/story2.png',
-            alt: 'Man with laptop',
-        },
-        {
-            src: '/story3.png',
-            alt: 'Woman with notebook',
-        },
-        {
-            src: '/story4.png',
-            alt: 'Man working on computer',
-        },
+        // {
+        //     src: '/story2.png',
+        //     alt: 'Man with laptop',
+        // },
+        // {
+        //     src: '/story3.png',
+        //     alt: 'Woman with notebook',
+        // },
+        // {
+        //     src: '/story4.png',
+        //     alt: 'Man working on computer',
+        // },
     ];
 
     const containerVariants = {

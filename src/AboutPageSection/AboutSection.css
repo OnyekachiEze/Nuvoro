@@ -183,7 +183,7 @@
 }
 
 .our-story-images {
-  display: grid;
+  /* display: grid; */
   grid-template-columns: repeat(2, 1fr);
   gap: 1.2rem;
   flex: 1;
@@ -194,18 +194,18 @@
   position: relative;
   border-radius: 1rem;
   overflow: hidden;
-  border: 2px solid #00f0ff;
-  box-shadow:
+  /* border: 2px solid #00f0ff; */
+  /* box-shadow:
     0 10px 25px rgba(0, 255, 255, 0.2),
     0 0 20px rgba(0, 255, 255, 0.3);
-  transition: transform 0.4s ease, box-shadow 0.3s ease;
+  transition: transform 0.4s ease, box-shadow 0.3s ease; */
 }
 
 .image-card:hover {
   transform: scale(1.08) rotateZ(1deg);
-  box-shadow:
+  /* box-shadow:
     0 15px 35px rgba(0, 255, 255, 0.4),
-    0 0 30px rgba(0, 255, 255, 0.5);
+    0 0 30px rgba(0, 255, 255, 0.5); */
 }
 
 .floating-image {

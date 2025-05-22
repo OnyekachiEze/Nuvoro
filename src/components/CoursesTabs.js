@@ -15,8 +15,8 @@ const CoursesTabs = () => {
     return (
         <section className="courses-section">
             <div className="courses-container">
-                <h2 className="section-title">Explore More</h2>
-                <p className="section-subtitle">Our Courses</p>
+                <h2 className="section-ttitle">Explore More</h2>
+                <p className="seection-subtitle">Our Courses</p>
 
                 <nav className="tabs-nav">
                     {tabData.map((tab) => (
