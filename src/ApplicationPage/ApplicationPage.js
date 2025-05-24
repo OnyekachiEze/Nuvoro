@@ -275,6 +275,7 @@ const ApplicationPage = () => {
 
 
         <div className="upload-section">
+          <p> Upload CV or Portfolio (optional)</p>
           <label htmlFor="cvUpload" className="upload-button">
             Upload Here
           </label>
@@ -285,7 +286,7 @@ const ApplicationPage = () => {
             style={{ display: "none" }}
             onChange={handleChange}
           />
-          <span className='form-text'>(optional)</span>
+          <span className='form-text'>(Optional)</span>
 
           {uploadedFileName && (
             <div className="file-name-box">
