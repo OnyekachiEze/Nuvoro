@@ -1,6 +1,6 @@
 import React from 'react'
-import { useState } from 'react'
-import logo from '../assets/logo.png';
+// import { useState } from 'react'
+// import logo from '../assets/logo.png';
 import './Blog.css'
 import Navbar from '../components/Navbar';
 
