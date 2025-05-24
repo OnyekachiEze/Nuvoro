@@ -20,7 +20,10 @@ const ApplicationPage = () => {
   });
 
   const [states, setStates] = useState([]);
-  const [uploadedFileName, setUploadedFileName] = useState("");  // For showing uploaded file name
+  const [uploadedFileName, setUploadedFileName] = useState("");
+  const [dobError, setDobError] = useState("");
+  const [showPopup, setShowPopup] = useState(false);
+  const [formErrors, setFormErrors] = useState({});
 
   const courses = [
     "Web Development",
@@ -45,11 +48,31 @@ const ApplicationPage = () => {
     }
   }, [formData.country]);
 
+  const calculateAge = (dob) => {
+    const birthDate = new Date(dob);
+    const today = new Date();
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const monthDifference = today.getMonth() - birthDate.getMonth();
+    if (monthDifference < 0 || (monthDifference === 0 && today.getDate() < birthDate.getDate())) {
+      age--;
+    }
+    return age;
+  };
+
   const handleChange = (e) => {
     const { name, value, type, checked, files } = e.target;
 
     if (name === "cv" && files.length > 0) {
-      setUploadedFileName(files[0].name); // Show uploaded file name
+      setUploadedFileName(files[0].name);
+    }
+
+    if (name === "dob") {
+      const age = calculateAge(value);
+      if (age < 15) {
+        setDobError("You must be at least 15 years old to apply.");
+      } else {
+        setDobError("");
+      }
     }
 
     setFormData((prev) => ({
@@ -58,18 +81,31 @@ const ApplicationPage = () => {
     }));
   };
 
+  const validateForm = () => {
+    const errors = {};
+    for (const field in formData) {
+      if (!formData[field] && field !== "cv") {
+        errors[field] = true;
+      }
+    }
+    if (calculateAge(formData.dob) < 15) {
+      errors.dob = true;
+      setDobError("You must be at least 15 years old to apply.");
+    }
+    setFormErrors(errors);
+    return Object.keys(errors).length === 0;
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!formData.agree) {
-      alert("You must agree to the terms and privacy policy.");
+    if (!validateForm()) {
+      alert("Please fill out all required fields.");
       return;
     }
 
-    console.log("Form submitted:", formData);
-    alert("Application submitted successfully! Thank you.");
+    setShowPopup(true);
 
-    // Reset form
     setFormData({
       fullName: "",
       email: "",
@@ -85,6 +121,8 @@ const ApplicationPage = () => {
       agree: false,
     });
     setUploadedFileName("");
+    setDobError("");
+    setFormErrors({});
   };
 
   return (
@@ -110,7 +148,7 @@ const ApplicationPage = () => {
         </div>
 
         <div className="input-grid">
-          <p className='form-text'>Full Name
+          <p className={`form-text ${formErrors.fullName ? 'error' : ''}`}>Full Name
             <input
               type="text"
               name="fullName"
@@ -119,7 +157,7 @@ const ApplicationPage = () => {
               required
             />
           </p>
-          <p className='form-text'>Email Address
+          <p className={`form-text ${formErrors.email ? 'error' : ''}`}>Email Address
             <input
               type="email"
               name="email"
@@ -128,7 +166,7 @@ const ApplicationPage = () => {
               required
             />
           </p>
-          <p className='form-text'>Phone Number
+          <p className={`form-text ${formErrors.phone ? 'error' : ''}`}>Phone Number
             <input
               type="tel"
               name="phone"
@@ -137,7 +175,7 @@ const ApplicationPage = () => {
               required
             />
           </p>
-          <p className='form-text'>Date of Birth
+          <p className={`form-text ${formErrors.dob ? 'error' : ''}`}>Date of Birth
             <input
               type="date"
               name="dob"
@@ -145,9 +183,10 @@ const ApplicationPage = () => {
               onChange={handleChange}
               required
             />
+            {dobError && <span className="error-message">{dobError}</span>}
           </p>
 
-          <p className='form-text'>
+          <p className={`form-text ${formErrors.state ? 'error' : ''}`}>
             City
             <select
               name="state"
@@ -163,7 +202,7 @@ const ApplicationPage = () => {
               ))}
             </select>
           </p>
-          <p className='form-text'>
+          <p className={`form-text ${formErrors.country ? 'error' : ''}`}>
             Country
             <select
               name="country"
@@ -181,7 +220,7 @@ const ApplicationPage = () => {
                 ))}
             </select>
           </p>
-          <p className='form-text'>
+          <p className={`form-text ${formErrors.course ? 'error' : ''}`}>
             Course
             <select
               name="course"
@@ -197,7 +236,7 @@ const ApplicationPage = () => {
               ))}
             </select>
           </p>
-          <p className='form-text'>
+          <p className={`form-text ${formErrors.experience ? 'error' : ''}`}>
             Experience Level
             <select
               name="experience"
@@ -215,7 +254,6 @@ const ApplicationPage = () => {
           </p>
         </div>
 
-        {/* Reason 1 textarea */}
         <textarea
           name="reason1"
           placeholder="Why do you want to join Nuvoro Academy?"
@@ -225,7 +263,6 @@ const ApplicationPage = () => {
         ></textarea>
         <p className="word-limit">200 Words</p>
 
-        {/* Upload section */}
         <div className="upload-section">
           <label htmlFor="cvUpload" className="upload-button">
             Upload Here
@@ -238,19 +275,12 @@ const ApplicationPage = () => {
             onChange={handleChange}
           />
           <span>(optional)</span>
-
-          {/* File name display box */}
-          {uploadedFileName && (
-            <div className="file-name-box">
-              {uploadedFileName}
-            </div>
-          )}
+          {uploadedFileName && <div className="file-name-box">{uploadedFileName}</div>}
         </div>
 
-        {/* Reason 2 textarea */}
         <textarea
           name="reason2"
-          placeholder="Why do you want to join Nuvoro Academy? (required)"
+          placeholder="How did you know about Nuvoro Academy? (required)"
           value={formData.reason2}
           onChange={handleChange}
           maxLength={200}
@@ -276,6 +306,16 @@ const ApplicationPage = () => {
           Submit Application
         </button>
       </form>
+
+      {showPopup && (
+        <div className="popup-overlay">
+          <div className="popup-modal">
+            <h2>Application Submitted!</h2>
+            <p>Thank you for applying. We'll get back to you soon.</p>
+            <button className="close-popup" onClick={() => setShowPopup(false)}>Close</button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
