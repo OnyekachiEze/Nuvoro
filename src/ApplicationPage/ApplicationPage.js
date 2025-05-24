@@ -21,9 +21,8 @@ const ApplicationPage = () => {
 
   const [states, setStates] = useState([]);
   const [uploadedFileName, setUploadedFileName] = useState("");
-  const [dobError, setDobError] = useState("");
+  const [ageError, setAgeError] = useState("");
   const [showPopup, setShowPopup] = useState(false);
-  const [formErrors, setFormErrors] = useState({});
 
   const courses = [
     "Web Development",
@@ -52,8 +51,8 @@ const ApplicationPage = () => {
     const birthDate = new Date(dob);
     const today = new Date();
     let age = today.getFullYear() - birthDate.getFullYear();
-    const monthDifference = today.getMonth() - birthDate.getMonth();
-    if (monthDifference < 0 || (monthDifference === 0 && today.getDate() < birthDate.getDate())) {
+    const monthDiff = today.getMonth() - birthDate.getMonth();
+    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
       age--;
     }
     return age;
@@ -66,64 +65,66 @@ const ApplicationPage = () => {
       setUploadedFileName(files[0].name);
     }
 
-    if (name === "dob") {
-      const age = calculateAge(value);
-      if (age < 15) {
-        setDobError("You must be at least 15 years old to apply.");
-      } else {
-        setDobError("");
-      }
-    }
-
     setFormData((prev) => ({
       ...prev,
       [name]: type === "checkbox" ? checked : value,
     }));
-  };
 
-  const validateForm = () => {
-    const errors = {};
-    for (const field in formData) {
-      if (!formData[field] && field !== "cv") {
-        errors[field] = true;
+    if (name === "dob") {
+      const age = calculateAge(value);
+      if (age < 15) {
+        setAgeError("You must be at least 15 years old to apply.");
+      } else {
+        setAgeError("");
       }
     }
-    if (calculateAge(formData.dob) < 15) {
-      errors.dob = true;
-      setDobError("You must be at least 15 years old to apply.");
-    }
-    setFormErrors(errors);
-    return Object.keys(errors).length === 0;
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!validateForm()) {
-      alert("Please fill out all required fields.");
+    const age = calculateAge(formData.dob);
+    if (age < 15) {
+      setAgeError("You must be at least 15 years old to apply.");
+      return;
+    }
+
+    if (formData.reason1.trim().length < 200) {
+      alert("Please enter at least 200 characters for why you want to join Nuvoro Academy.");
+      return;
+    }
+    if (formData.reason2.trim().length > 200) {
+      alert("Please enter at least 200 characters how you heard about Nuvoro Academy.");
+      return;
+    }
+
+    if (!formData.agree) {
+      alert("You must agree to the terms and privacy policy.");
       return;
     }
 
     setShowPopup(true);
 
-    setFormData({
-      fullName: "",
-      email: "",
-      phone: "",
-      dob: "",
-      city: "",
-      country: "",
-      state: "",
-      course: "",
-      experience: "",
-      reason1: "",
-      reason2: "",
-      agree: false,
-    });
-    setUploadedFileName("");
-    setDobError("");
-    setFormErrors({});
+    setTimeout(() => {
+      setShowPopup(false);
+      setFormData({
+        fullName: "",
+        email: "",
+        phone: "",
+        dob: "",
+        city: "",
+        country: "",
+        state: "",
+        course: "",
+        experience: "",
+        reason1: "",
+        reason2: "",
+        agree: false,
+      });
+      setUploadedFileName("");
+    }, 3000);
   };
+
 
   return (
     <div>
@@ -148,7 +149,7 @@ const ApplicationPage = () => {
         </div>
 
         <div className="input-grid">
-          <p className={`form-text ${formErrors.fullName ? 'error' : ''}`}>Full Name
+          <p className='form-text'>Full Name
             <input
               type="text"
               name="fullName"
@@ -157,7 +158,7 @@ const ApplicationPage = () => {
               required
             />
           </p>
-          <p className={`form-text ${formErrors.email ? 'error' : ''}`}>Email Address
+          <p className='form-text'>Email Address
             <input
               type="email"
               name="email"
@@ -166,7 +167,7 @@ const ApplicationPage = () => {
               required
             />
           </p>
-          <p className={`form-text ${formErrors.phone ? 'error' : ''}`}>Phone Number
+          <p className='form-text'>Phone Number
             <input
               type="tel"
               name="phone"
@@ -175,7 +176,7 @@ const ApplicationPage = () => {
               required
             />
           </p>
-          <p className={`form-text ${formErrors.dob ? 'error' : ''}`}>Date of Birth
+          <p className='form-text'>Date of Birth
             <input
               type="date"
               name="dob"
@@ -183,26 +184,10 @@ const ApplicationPage = () => {
               onChange={handleChange}
               required
             />
-            {dobError && <span className="error-message">{dobError}</span>}
+            {ageError && <span className="error-message">{ageError}</span>}
           </p>
 
-          <p className={`form-text ${formErrors.state ? 'error' : ''}`}>
-            City
-            <select
-              name="state"
-              value={formData.state}
-              onChange={handleChange}
-              required
-            >
-              <option value="">Select City</option>
-              {states.map((state) => (
-                <option key={state} value={state}>
-                  {state}
-                </option>
-              ))}
-            </select>
-          </p>
-          <p className={`form-text ${formErrors.country ? 'error' : ''}`}>
+          <p className='form-text'>
             Country
             <select
               name="country"
@@ -220,7 +205,23 @@ const ApplicationPage = () => {
                 ))}
             </select>
           </p>
-          <p className={`form-text ${formErrors.course ? 'error' : ''}`}>
+          <p className='form-text'>
+            City
+            <select
+              name="state"
+              value={formData.state}
+              onChange={handleChange}
+              required
+            >
+              <option value="">Select City</option>
+              {states.map((state) => (
+                <option key={state} value={state}>
+                  {state}
+                </option>
+              ))}
+            </select>
+          </p>
+          <p className='form-text'>
             Course
             <select
               name="course"
@@ -236,7 +237,7 @@ const ApplicationPage = () => {
               ))}
             </select>
           </p>
-          <p className={`form-text ${formErrors.experience ? 'error' : ''}`}>
+          <p className='form-text'>
             Experience Level
             <select
               name="experience"
@@ -259,9 +260,19 @@ const ApplicationPage = () => {
           placeholder="Why do you want to join Nuvoro Academy?"
           value={formData.reason1}
           onChange={handleChange}
-          maxLength={200}
+          className={formData.reason1.trim().length < 200 ? "textarea-error" : ""}
+          maxLength={900}
+          required
         ></textarea>
-        <p className="word-limit">200 Words</p>
+        <p className="word-limit">
+          {formData.reason1.trim().length} /  (minimum 200)
+        </p>
+        {formData.reason1.trim().length > 0 && formData.reason1.trim().length < 200 && (
+          <p className="error-message">Please enter at least 200 characters.</p>
+        )}
+
+
+
 
         <div className="upload-section">
           <label htmlFor="cvUpload" className="upload-button">
@@ -274,19 +285,29 @@ const ApplicationPage = () => {
             style={{ display: "none" }}
             onChange={handleChange}
           />
-          <span>(optional)</span>
-          {uploadedFileName && <div className="file-name-box">{uploadedFileName}</div>}
-        </div>
+          <span className='form-text'>(optional)</span>
 
+          {uploadedFileName && (
+            <div className="file-name-box">
+              {uploadedFileName}
+            </div>
+          )}
+        </div>
         <textarea
           name="reason2"
           placeholder="How did you know about Nuvoro Academy? (required)"
           value={formData.reason2}
           onChange={handleChange}
-          maxLength={200}
+          className={formData.reason2.trim().length < 200 ? "textarea-error" : ""}
+          maxLength={900}
           required
         ></textarea>
-        <p className="word-limit">200 Words</p>
+        <p className="word-limit">
+          {formData.reason2.trim().length} / (minimum 200)
+        </p>
+        {formData.reason2.trim().length > 0 && formData.reason1.trim().length < 200 && (
+          <p className="error-message">Please enter at least 200 characters.</p>
+        )}
 
         <div className="toggle-section">
           <label className="toggle">
@@ -299,7 +320,7 @@ const ApplicationPage = () => {
             />
             <span className="slider"></span>
           </label>
-          <p>I agree to Nuvoro Academy’s terms and privacy policy.</p>
+          <p className='form-text'>I agree to Nuvoro Academy’s terms and privacy policy.</p>
         </div>
 
         <button type="submit" className="submit-btn">
@@ -308,11 +329,11 @@ const ApplicationPage = () => {
       </form>
 
       {showPopup && (
-        <div className="popup-overlay">
-          <div className="popup-modal">
-            <h2>Application Submitted!</h2>
-            <p>Thank you for applying. We'll get back to you soon.</p>
-            <button className="close-popup" onClick={() => setShowPopup(false)}>Close</button>
+        <div className="popup success">
+          <div className="popup-content">
+            <span className="popup-icon">🎉</span>
+            <h3>Form Submitted!</h3>
+            <p>Thank you for applying to Nuvoro Academy.</p>
           </div>
         </div>
       )}
