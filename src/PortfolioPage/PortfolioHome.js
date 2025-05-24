@@ -9,10 +9,10 @@ const PortfolioHome = () => {
             <div className="banner-container">
                 <div className="banner-content">
                     <h1 className="banner-title">Our Work Speaks for Us</h1>
-                    <p className="banner-description">
+                    {/* <p className="banner-description">
                         Explore some of our finest projects that reflect our commitment to
                         innovation, functionality, and elegance.
-                    </p>
+                    </p> */}
                     <div className="banner-buttons">
                         <button className="btn-primary">Book a free Consultation</button>
                         <button className="btn-secondary">See More Project</button>
@@ -33,10 +33,11 @@ const PortfolioHome = () => {
                         <h2 className="portfolio-project-title">Behealthy Mobile App</h2>
                         <h3 className="portfolio-section-title">Overview</h3>
                         <p className="portfolio-description">
-                            Behealthy approached Nuvoro to design a type of health app, that would help track health status, keep track of medication and vaccination. The challenge was to create a seamless, visually appealing interface that aligns with Behealthy brand identity while ensuring high usability and customer satisfaction.
+                            Behealthy approached Nuvoro to design a type of heath app, that would help track health status, keep track of medication and vaccination. The challenge was to create a seamless, visually appealing interface that aligns  with Behealthy brand identity while ensuring high usability and customer satisfaction. We are able to develop an application that provided:
                         </p>
-                        <button className="portfolio-btn">50% decrease in missing medication</button>
-                        <button className="portfolio-btn">50% reduction in missing appointments</button>
+                        <button className="portfolio-btn">Increase in medical follow-up </button>
+                        <button className="portfolio-btn">Robust data security</button>
+                        <button className="portfolio-btn">Instant doctor responds</button>
                         <p className="portfolio-tech-info">
                             <span className="portfolio-label">Core Tech:</span> Figma, Ruby on Rails, Node.js, SQL
                         </p>
@@ -81,6 +82,30 @@ const PortfolioHome = () => {
                     </section>
                 </main>
             </div>
+
+            <section className="portfolio-project-section">
+                <div className="portfolio-image-wrapper">
+                    <img
+                        src="/Screenshot 2025-05-24 195820.png"
+                        alt="Three mobile phone screens side by side showing a health app interface with doctor search, medicines list, and calories tracking"
+                    />
+                </div>
+                <div className="portfolio-project-content">
+                    <h2 className="portfolio-project-title">Wedress Web Page</h2>
+                    <h3 className="portfolio-section-title">Overview</h3>
+                    <p className="portfolio-description">
+                        WeDress, a trendy online boutique known for its elegant dresses, had built a loyal following. But as sales grew, their website struggled to keep up. Slow load times, a clunky checkout process, and a dated design were costing them customers.
+                        Determined to elevate their brand, WeDress reached out to NuVoro, renowned for crafting seamless e-commerce experiences.                    </p>
+                    <button className="portfolio-btn">70% Increase in online sales </button>
+                    <button className="portfolio-btn">90% reduction in customer decline  </button>
+                    <p className="portfolio-tech-info">
+                        <span className="portfolio-label">Core Tech:</span> Figma, Ruby on Rails, Node.js, SQL
+                    </p>
+                    <a href="#" className="portfolio-view-more">
+                        View More <i className="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </section>
 
 
 

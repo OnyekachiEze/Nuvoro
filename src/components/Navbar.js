@@ -42,7 +42,7 @@ const Navbar = () => {
                     <a href="/about">About us</a>
                     <a href="/services">Services</a>
                     <a href="/academy">Academy</a>
-                    <a href="#">Portfolio</a>
+                    <a href="/portfolio">Portfolio</a>
                     <a href="/blog">Blog</a>
                     <button className="get-started-btn">Get Started</button>
                 </div>

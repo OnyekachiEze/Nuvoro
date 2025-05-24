@@ -6,25 +6,18 @@ const HeroSection = () => {
 
     return (
         <div>
-            <section className="hero-section">
+            <section className="home-hero-section">
                 <Navbar />
 
                 <div
-                    className="hero"
+                    className="home-hero"
                     aria-label="Welcome to NUVORO, Innovation Meets Elegance in Software Solutions"
                 >
-                    <div className="hero-text fade-in">
-                        <p>Welcome to NUVORO</p>
-                        <h1>
-                            <span className="line-1">Innovation Meets</span>
-                            <br />
-                            <span className="line-2">Elegance in</span>
-                            <br />
-                            <span className="line-3">Software Solutions</span>
-                            <br />
-                            <span className="line-4">and Tech Skills Development</span>
-                            
-                        </h1>
+                    <div className="home-hero-text fade-in">
+                        <h1>Welcome to NUVORO</h1>
+                        <p>
+                            Innovation Meets Elegance in Software Solutions and Tech Skills Development
+                        </p>
                         {/* <div className="buttons">
                             <a href="#" className="btn neon">
                                 Get Started
@@ -82,10 +75,7 @@ const HeroSection = () => {
 
                     <div className="text-column">
                         <p className="company-description">
-                            Driven by a shared vision, a team of relentless innovators founded Nuvoro - a tech powerhouse
-                            bridging imagination and digital excellence through app development, software engineering, and
-                            full-stack solutions. Their elite UI/UX designers sculpted intuitive, captivating experiences, while
-                            their engineers delivered scalable, future-proof systems for global clients.
+                            Driven by a shared vision, a team of relentless innovators founded Nuvoro - a tech powerhouse bridging imagination and digital excellence through app development, software engineering, and full-stack solutions. Their elite UI/UX designers sculpted intuitive, captivating experiences, while their engineers delivered scalable, future-proof systems for global clients.
                         </p>
 
                         <button className="read-more-btn">Read More</button>

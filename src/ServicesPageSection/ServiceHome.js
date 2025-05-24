@@ -17,6 +17,15 @@ const services = [
     "Help Desk Service"
 ];
 
+const steps = [
+    { icon: "📞", title: "Consultation" },
+    { icon: "🧠", title: "Strategy & Planning" },
+    { icon: "💻", title: "Design & Development" },
+    { icon: "🧪", title: "Testing & Deployment" },
+    { icon: "🚀", title: "Support & Scaling" },
+];
+
+
 
 const ServiceHome = () => {
 
@@ -68,10 +77,10 @@ const ServiceHome = () => {
                 <section className="services-section">
 
                     <div className="text-area">
-                        <h2>Our Services</h2>
+                        <h2>Transforming Ideas into Powerful Digital Solutions</h2>
                         <p>
-                            Empowering businesses with transformative technology while cultivating future-ready talent
-                            through hands-on, industry-aligned training.
+                            We offer premium software services and technical expertise to help
+                            businesses grow, evolve, and lead in their industries.
                         </p>
                     </div>
                 </section>
@@ -102,18 +111,11 @@ const ServiceHome = () => {
                 </div>
             </section>
 
-            <div className="button-input-container">
-                <div className="button-input-box animate-slide-in">
-                    <input
-                        type="text"
-                        placeholder="What can we help you with?"
-                        className="button-input-field"
-                        value={inputValue}
-                        onChange={(e) => setInputValue(e.target.value)}
-                    />
-                    <button className="button-input-btn" onClick={handleClick}>
-                        Get Started
-                    </button>
+            <div className="quote-section">
+                <p className="quote-text">Interested in what we do?</p>
+                <div className="quote-buttons">
+                    <button className="btn primary">Get a Quote</button>
+                    <button className="btn secondary">Book free Consultation</button>
                 </div>
             </div>
 
@@ -124,7 +126,7 @@ const ServiceHome = () => {
                 </div>
 
                 <div className="scroll-container" ref={scrollRef}>
-                    <div className="service-cardd software">
+                    <div className="scroll-service-cardd software">
                         <h2>Software<br />Development</h2>
                         <p>
                             End-to-end custom software engineering with scalable architectures, rigorous testing, and compliance-ready solutions.
@@ -137,7 +139,7 @@ const ServiceHome = () => {
                         </ul>
                     </div>
 
-                    <div className="service-cardd uiux">
+                    <div className="scroll-service-cardd uiux">
                         <h2>UIUX<br />Design</h2>
                         <p>
                             Crafting intuitive, human-centered digital experiences that drive engagement and conversions.
@@ -153,7 +155,7 @@ const ServiceHome = () => {
                         </ul>
                     </div>
 
-                    <div className="service-cardd software">
+                    <div className="scroll-service-cardd software">
                         <h2>Software<br />Development</h2>
                         <p>
                             End-to-end custom software engineering with scalable architectures, rigorous testing, and compliance-ready solutions.
@@ -166,7 +168,7 @@ const ServiceHome = () => {
                         </ul>
                     </div>
 
-                    <div className="service-cardd uiux">
+                    <div className="scroll-service-cardd uiux">
                         <h2>UIUX<br />Design</h2>
                         <p>
                             Crafting intuitive, human-centered digital experiences that drive engagement and conversions.
@@ -187,6 +189,25 @@ const ServiceHome = () => {
                     <span className="active-dot"></span>
                     <span></span>
                     <span></span>
+                </div>
+            </div>
+
+            <div className="how-we-work">
+                <div className="work-image">
+                    <h2>How We Work</h2>
+
+                    <img src="../f536ed6aab552b9e3b80aee479d954a0.png" alt="Team working together" />
+                </div>
+                <div className="work-steps">
+                    <ul>
+                        {steps.map((step, index) => (
+                            <li key={index}>
+                                <span className="icon">{step.icon}</span>
+                                <span className="text">{step.title}</span>
+                                {index !== steps.length - 1 && <span className="line"></span>}
+                            </li>
+                        ))}
+                    </ul>
                 </div>
             </div>
 

@@ -1,5 +1,5 @@
 .about-hero {
-  background: url(./img/bg.png);
+  background: url(./unblurimageai_unblur_d5b5e0535ebd85892b636194f15ef16c.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -121,14 +121,14 @@
 .text-section h2 {
   color: #1e293b;
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
 .text-section p {
   color: #334155;
-  font-size: 0.875rem;
-  line-height: 1.625;
+  font-size: 1rem;
+  line-height: 2rem;
 }
 
 .image-section {
@@ -159,7 +159,6 @@
 }
 
 .our-story-section {
-  background: linear-gradient(to right, #f5f7fa, #e0ecff);
   padding: 5rem 2rem;
   min-height: 100vh;
   display: flex;

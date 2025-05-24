@@ -1,69 +1,89 @@
-.academy-hero {
-    background: url(./academy1.png);
+.academy-tech-banner {
+    background-image: url('./unblurimageai_unblur_08cb61526ba9b686ccc0cad95641291e.png');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    height: auto;
-}
-
-.welcome-container {
+    height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    padding: 1rem;
+    justify-content: center;
+    position: relative;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
 }
 
-.welcome-box-container {
-    position: relative;
-    max-width: 1280px;
+.academy-overlay {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 1rem;
+    max-width: 800px;
     width: 100%;
 }
 
-.welcome-hero {
-    width: 95%;
-
-}
-
-.welcome-box {
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    border: 8px solid #a7c0e9;
-    max-width: 768px;
-    width: 90%;
-    padding: 2rem;
-}
-
-.welcome-content {
-    position: relative;
-    text-align: center;
-}
-
-.welcome-title {
-    font-family: 'Merriweather', serif;
-    color: #1a254f;
-    font-size: 3rem;
+.academy-headline {
+    font-size: 2rem;
     font-weight: bold;
-    line-height: 1.2;
+    margin-bottom: 1rem;
 }
 
-.welcome-subtitle {
-    font-family: 'Merriweather', serif;
-    color: #1a254f;
-    font-size: 2.5rem;
-    margin-top: 0.25rem;
+.academy-subtext {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    line-height: 1.5;
 }
 
-.welcome-welcome {
-    font-family: 'Merriweather', serif;
-    color: #1a254f;
-    font-size: 4rem;
-    font-weight: 600;
-    margin-top: 0.5rem;
+.academy-cta-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
 }
+
+.academy-explore-button,
+.academy-apply-button {
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.academy-explore-button {
+    background-color: #ff2b6b;
+    color: white;
+}
+
+.academy-explore-button:hover {
+    background-color: #e02660;
+}
+
+.academy-apply-button {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+}
+
+.academy-apply-button:hover {
+    background-color: white;
+    color: #333;
+}
+
+@media (min-width: 768px) {
+    .academy-headline {
+        font-size: 2.5rem;
+    }
+
+    .academy-subtext {
+        font-size: 1.125rem;
+    }
+
+    .academy-cta-buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
 
 
 .nuvoro-container {
@@ -708,8 +728,8 @@
 
 
 .testimonial-cardd:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
 
 .student-info {
@@ -752,18 +772,19 @@
 
 /* Fade-in Animation */
 @keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .fade-in {
-  animation: fadeInUp 0.8s ease forwards;
+    animation: fadeInUp 0.8s ease forwards;
 }
 
 
@@ -792,23 +813,25 @@
 }
 
 @media (max-width: 480px) {
-  .welcome-title {
-      font-size: 2rem;
-  }
+    .welcome-title {
+        font-size: 2rem;
+    }
 
-  .about-image {
-      width: 100%;
-      height: auto;
-  }
+    .about-image {
+        width: 100%;
+        height: auto;
+    }
 }
 
 
 
-.course-card, .apply-button, .video-image {
+.course-card,
+.apply-button,
+.video-image {
     transition: all 0.3s ease-in-out;
 }
 
 .course-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 }

@@ -157,22 +157,16 @@ const AcademyHome = () => {
             <div className="academy-hero">
                 <Navbar />
 
-                <div className="welcome-container">
-                    <div className="welcome-box-container">
-                        <img
-                            src="academy.png"
-                            alt="Group of seven diverse people smiling and raising hands"
-                            className="welcome-hero"
-                        />
-
-                        <div className="welcome-box">
-                            <div className="welcome-content">
-
-
-                                <h1 className="welcome-title"> Welcome</h1>
-                                <p className="welcome-subtitle">to</p>
-                                <p className="welcome-welcome">Nuvoro Academy</p>
-                            </div>
+                <div className="academy-tech-banner">
+                    <div className="academy-overlay">
+                        <h1 className="academy-headline">Empowering the Next Generation of Tech Leaders</h1>
+                        <p className="academy-subtext">
+                            Join Nuvoro Academy to gain in-demand digital skills, hands-on experience, and
+                            mentorship from industry experts
+                        </p>
+                        <div className="academy-cta-buttons">
+                            <button className="academy-explore-button">Explore Courses</button>
+                            <button className="academy-apply-button">Apply Now</button>
                         </div>
                     </div>
                 </div>
@@ -308,7 +302,7 @@ const AcademyHome = () => {
                     {/* Advanced Class */}
                     <article className="track-card">
                         <h3 className="track-header">Advanced Class</h3>
-                        <p className="track-taglinee">Ready to dominate the tech world?</p>
+                        <p className="track-taglinee">Ready to rise to the apex  in the tech world?</p>
                         <p>Build projects that mirror real industry challenges</p>
                         <p>Get portfolio pieces that make recruiters stop scrolling</p>
                         <p>Acquire adequate knowledge and skills as you prepare for internship</p>
@@ -331,15 +325,15 @@ const AcademyHome = () => {
                         <div className="admission-step">
                             <img src="./check-icon.png" alt="check" className="check-icon" />
                             <div>
-                                <h4>Apply Online</h4>
-                                <p>Decided on a course of your choice? quickly hit the apply button to proceed</p>
+                                <h4>Fill out the online application form</h4>
+                                <p>Carefully fill out the online form, indicating your course of interest</p>
                             </div>
                         </div>
 
                         <div className="admission-step">
                             <img src="./check-icon.png" alt="check" className="check-icon" />
                             <div>
-                                <h4>Assessment</h4>
+                                <h4>Short virtual interview (optional for some courses)</h4>
                                 <p>Nuvoro Academy assesses you through a basic aptitude evaluation and provides expert counseling</p>
                             </div>
                         </div>
@@ -347,11 +341,11 @@ const AcademyHome = () => {
                         <div className="admission-step">
                             <img src="./check-icon.png" alt="check" className="check-icon" />
                             <div>
-                                <h4>Apply Online</h4>
-                                <p>Decided on a course of your choice? quickly hit the apply button to proceed</p>
+                                <h4>Get admitted and begin your tech journey</h4>
+                                <p>Congratulations You’ve taken the first step toward an exciting future in tech</p>
                             </div>
                         </div>
-                        <button className="apply-button">Apply Now</button>
+                        <button className="apply-button">Eligibility: Open to anyone with a passion for tech (age 15+ recommended)</button>
 
                     </div>
 

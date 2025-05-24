@@ -1,44 +1,72 @@
 import React from 'react'
 import './ser.css'
 
+
+const industries = [
+    {
+        title: "Health Care",
+        description:
+            "Nuvoro delivers HIPAA-compliant health tech solutions for secure patient data management and telemedicine platforms.",
+        icon: "❤️", // Replace with actual SVG or icon font if needed
+    },
+    {
+        title: "Finance",
+        description:
+            "We build fraud-proof fintech systems with blockchain-grade security and real-time transaction processing.",
+        icon: "💰",
+    },
+    {
+        title: "E-commerce",
+        description:
+            "Nuvoro engineers high-conversion e-commerce experiences with AI-powered personalization and seamless checkout flows.",
+        icon: "🛒",
+    },
+    {
+        title: "Education",
+        description:
+            "Build secure, scalable tech skill through industry-aligned training that drives innovation and professional growth.",
+        icon: "🎓",
+    },
+];
+
 const testimonials = [
-  {
-    name: "Rita",
-    img: "/test1.png",
-    bgColor: "#555ba1",
-    textColor: "white",
-    stars: 5,
-    halfStar: false,
-    text: "Nuvoro designed an incredible app for our band—sleek, user-friendly, and packed with cool features.",
-  },
-  {
-    name: "Francis",
-    img: "/test2.png",
-    bgColor: "#d9d9d9",
-    textColor: "#1e2541",
-    stars: 5,
-    halfStar: false,
-    text: "Nuvoro designed an incredible app for our band—sleek, user-friendly, and packed with cool features.",
-  },
-  {
-    name: "Rita",
-    img: "/test1.png",
-    bgColor: "#d9d9d9",
-    textColor: "#1e2541",
-    stars: 5,
-    halfStar: false,
-    text: "Nuvoro designed an incredible app for our band—sleek, user-friendly, and packed with cool features.",
-  },
- 
-  {
-    name: "Chidima",
-    img: "/test3.png",
-    bgColor: "#d9d9d9",
-    textColor: "#1e2541",
-    stars: 4,
-    halfStar: true,
-    text: "Nuvoro designed an incredible app for our band—sleek, user-friendly, and packed with cool features.",
-  },
+    {
+        name: "Rita",
+        img: "/test1.png",
+        bgColor: "#555ba1",
+        textColor: "white",
+        stars: 5,
+        halfStar: false,
+        text: "Nuvoro designed an incredible app for our band—sleek, user-friendly, and packed with cool features.",
+    },
+    {
+        name: "Francis",
+        img: "/test2.png",
+        bgColor: "#d9d9d9",
+        textColor: "#1e2541",
+        stars: 5,
+        halfStar: false,
+        text: "Nuvoro designed an incredible app for our band—sleek, user-friendly, and packed with cool features.",
+    },
+    {
+        name: "Rita",
+        img: "/test1.png",
+        bgColor: "#d9d9d9",
+        textColor: "#1e2541",
+        stars: 5,
+        halfStar: false,
+        text: "Nuvoro designed an incredible app for our band—sleek, user-friendly, and packed with cool features.",
+    },
+
+    {
+        name: "Chidima",
+        img: "/test3.png",
+        bgColor: "#d9d9d9",
+        textColor: "#1e2541",
+        stars: 4,
+        halfStar: true,
+        text: "Nuvoro designed an incredible app for our band—sleek, user-friendly, and packed with cool features.",
+    },
 ];
 
 
@@ -47,7 +75,7 @@ const Industries = () => {
 
     return (
         <div>
-            <section className="industries-section">
+            {/* <section className="industries-section">
                 <h2 className="section-title">Industries Served</h2>
                 <div className="industries-grid">
                     <div className="industry-card education">
@@ -115,6 +143,19 @@ const Industries = () => {
                             </div>
                         </div>
                     </div>
+                </div>
+            </section> */}
+
+            <section className="services-industries-section">
+                <h2>Industries Served</h2>
+                <div className="services-industries-grid">
+                    {industries.map((industry, index) => (
+                        <div key={index} className="services-industry-card">
+                            <div className="services-industry-icon">{industry.icon}</div>
+                            <h3>{industry.title}</h3>
+                            <p>{industry.description}</p>
+                        </div>
+                    ))}
                 </div>
             </section>
 
@@ -226,6 +267,8 @@ const Industries = () => {
                     ))}
                 </div>
             </section>
+
+            
 
         </div>
     )

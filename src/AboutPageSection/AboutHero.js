@@ -43,11 +43,10 @@ const AboutHero = () => {
                 <section className="about-nuvoro">
                     <div className="about-content">
                         <h2>
-                            About <span className="highlight">Nuvoro</span>
+                            About Nuvoro
                         </h2>
                         <p>
-                            Nuvoro is a visionary tech company <span className='span-text'> dedicated to delivering innovative software <br></br></span>
-                            and digital <span className='span-text'> solutions that transform businesses.</span>
+                            Nuvoro is a visionary tech company dedicated to delivering innovative software and digitalsolutions that transform businesses.
                         </p>
                     </div>
                 </section>

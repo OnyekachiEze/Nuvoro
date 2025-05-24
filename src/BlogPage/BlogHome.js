@@ -17,34 +17,15 @@ const BlogHome = () => {
 
                     <div className="hero-overlay">
                         <h1 className="hero-titleee">
-                            Nuvoro
+                            Nuvoro Blog
                         </h1>
                         <p className="hero-subtitle">
-                            The Future of Learning
+                            Bringing you insight on latest tech news
                         </p>
                     </div>
                 </div>
-                <div className="blog-container"></div>
 
-                <div className="nuvoro-blog">
-                    <div className="hero-image-container">
-
-                        <div className="hero-overlay">
-                            <h1 className="hero-titleee">
-                                Nuvoro Blog
-                            </h1>
-                            <p className="hero-subtitleee">
-                                <span className="highlighttext">Bringing</span> You Insight On Latest <span className="highlighttext">Tech News</span>
-                            </p>
-                        </div>
-                    </div>
-                    <div className="category-bar">
-                        <button className="category-btn">AI</button>
-                        <button className="category-btn">Designs</button>
-                        <button className="category-btn">Tech Learn</button>
-                        <button className="category-btn">Tech News</button>
-                    </div>
-                </div>
+                
             </div>
 
 

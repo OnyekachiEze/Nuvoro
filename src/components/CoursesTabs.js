@@ -72,7 +72,7 @@ const CoursesTabs = () => {
                             <article className="card">
                                 <h3 className="card-title">Admission</h3>
                                 <img
-                                    src="card3.png"
+                                    src="d188da345a1aa258f410cae6f82d4818.png"
                                     alt="Happy graduates"
                                     className="card-image"
                                 />
