@@ -10,6 +10,9 @@ import SignupPage from './Form/SignupPage';
 import LoginForm from './Form/LoginForm';
 import PortfolioPage from './PortfolioPage/PortfolioPage';
 import ApplicationPage from './ApplicationPage/ApplicationPage';
+import BlogPage1 from './BlogPage/BlogPage1';
+import BlogPage2 from './BlogPage/BlogPage2';
+
 
 
 
@@ -60,6 +63,9 @@ const App = () => {
         <Route path="/login" element={<LoginForm />} />
         <Route path="/portfolio" element={<PortfolioPage />} />
         <Route path="/application" element={<ApplicationPage />} />
+        <Route path="/blog1" element={<BlogPage1 />} />
+        <Route path="/blog2" element={<BlogPage2 />} />
+        {/* Add more routes as needed */}
     
       </Routes>
     </Router>

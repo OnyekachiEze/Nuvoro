@@ -1,8 +1,5 @@
 .banner-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+
     padding: 2rem;
     background: url('portfoliobg.png') no-repeat center center;
     background-size: cover;
@@ -16,12 +13,17 @@
     min-width: 300px;
     padding: 1rem;
     border-radius: 0.5rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5rem;
+    line-height: 2rem;
 }
 
 .banner-title {
     font-size: 2.5rem;
     font-weight: bold;
-    margin-bottom: 1rem;
+    margin-bottom: 4rem;
 }
 
 .banner-description {
@@ -163,28 +165,25 @@
 }
 
 .portfolio-btn {
-    display: block;
-    width: 100%;
-    max-width: 260px;
-    font-size: 0.75rem;
+    font-size: 1.25rem;
     font-weight: 600;
-    color: #fff;
-    background-color: #f72f5e;
+    /* color: #fff; */
+    color: #f72f5e;
     padding: 0.5rem 0.75rem;
     border-radius: 0.375rem;
     margin-bottom: 0.75rem;
     cursor: pointer;
     border: none;
     transition: background-color 0.3s;
-}
-
-.portfolio-btn:hover {
-    background-color: #e02654;
+    margin: 0;
+    margin-left: 0rem;
+    /* line-height:0rem ; */
 }
 
 .portfolio-tech-info {
-    font-size: 0.75rem;
+    font-size: 1rem;
     margin-bottom: 1.5rem;
+    margin-top: 2rem;
     color: #12154C;
 
 }
@@ -204,28 +203,7 @@
     user-select: none;
 }
 
-.portfolio-view-more i,
-.paytrackr-viewmore i {
-    margin-left: 0.5rem;
-    border-radius: 50%;
-    transition: transform 0.3s;
-    border: 3px solid #1a1f44;
-    padding: 0.25rem;
-}
-
-.portfolio-view-more:hover i {
-    transform: translateX(5px);
-
-}
-
-.paytrackr-viewmore:hover i {
-    transform: translateX(5px);
-
-}
-
-.portfolio-view-more:hover {
-    color: #3b3f6b;
-}
+/*  */
 
 @media (min-width: 768px) {
     .portfolio-project-section {
@@ -299,17 +277,17 @@
 }
 
 .paytrackr-button {
-    background-color: #FF2E5A;
-    color: white;
-    font-size: 0.75rem;
+    color: #FF2E5A;
+    font-size: 1.2rem;
     font-weight: 600;
     border-radius: 0.375rem;
     padding: 1.1rem 1rem;
-    width: 100%;
+    /* width: 100%; */
     /* max-width: 280px; */
     margin-top: 0.5rem;
     border: none;
     cursor: pointer;
+    line-height: 0rem;
 }
 
 .paytrackr-tech {

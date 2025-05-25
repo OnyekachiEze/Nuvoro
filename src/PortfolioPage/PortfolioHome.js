@@ -4,9 +4,10 @@ import Navbar from '../components/Navbar'
 const PortfolioHome = () => {
     return (
         <div className="portfolio-home">
-            <Navbar />
 
             <div className="banner-container">
+                <Navbar />
+
                 <div className="banner-content">
                     <h1 className="banner-title">Our Work Speaks for Us</h1>
                     {/* <p className="banner-description">
@@ -41,9 +42,9 @@ const PortfolioHome = () => {
                         <p className="portfolio-tech-info">
                             <span className="portfolio-label">Core Tech:</span> Figma, Ruby on Rails, Node.js, SQL
                         </p>
-                        <a href="#" className="portfolio-view-more">
+                        {/* <a href="#" className="portfolio-view-more">
                             View More <i className="fas fa-chevron-right"></i>
-                        </a>
+                        </a> */}
                     </div>
                 </section>
             </main>
@@ -60,17 +61,18 @@ const PortfolioHome = () => {
                             </p>
                         </div>
                         <button className="paytrackr-button">
-                            78% decrease in miscellaneous spending
+                            Easy Expense Tracking
                         </button>
                         <button className="paytrackr-button">
-                            80% Increase in optimal savings
+                            Income Management
+                        </button>
+                        <button className="paytrackr-button">
+                            Bill Reminders & Due Dates
                         </button>
                         <p className="paytrackr-tech">
                             <span className="font-semibold">Core Tech:</span> Figma, Ruby on Rails, Node.js, SQL
                         </p>
-                        <button className="paytrackr-viewmore">
-                            View More  <i className="fas fa-chevron-right"></i>
-                        </button>
+
                     </section>
 
                     <section className="paytrackr-image-wrapper">
@@ -96,14 +98,13 @@ const PortfolioHome = () => {
                     <p className="portfolio-description">
                         WeDress, a trendy online boutique known for its elegant dresses, had built a loyal following. But as sales grew, their website struggled to keep up. Slow load times, a clunky checkout process, and a dated design were costing them customers.
                         Determined to elevate their brand, WeDress reached out to NuVoro, renowned for crafting seamless e-commerce experiences.                    </p>
-                    <button className="portfolio-btn">70% Increase in online sales </button>
-                    <button className="portfolio-btn">90% reduction in customer decline  </button>
+                    <button className="portfolio-btn">Niche Market Focus </button>
+                    <button className="portfolio-btn">Secure Payment & Escrow Protection </button>
+                    <button className="portfolio-btn">Buyer-Seller Chat & Reviews </button>
                     <p className="portfolio-tech-info">
                         <span className="portfolio-label">Core Tech:</span> Figma, Ruby on Rails, Node.js, SQL
                     </p>
-                    <a href="#" className="portfolio-view-more">
-                        View More <i className="fas fa-chevron-right"></i>
-                    </a>
+
                 </div>
             </section>
 

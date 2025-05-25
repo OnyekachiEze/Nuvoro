@@ -1,7 +1,11 @@
-.academy-tech-banner {
+.academy-hero {
     background-image: url('./unblurimageai_unblur_08cb61526ba9b686ccc0cad95641291e.png');
     background-size: cover;
     background-position: center;
+}
+
+.academy-tech-banner {
+
     height: 100vh;
     display: flex;
     align-items: center;

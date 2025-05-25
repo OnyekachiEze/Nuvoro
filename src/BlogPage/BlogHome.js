@@ -25,7 +25,7 @@ const BlogHome = () => {
                     </div>
                 </div>
 
-                
+
             </div>
 
 
@@ -41,18 +41,10 @@ const BlogHome = () => {
                         />
                         <div className="article-text">
                             <p>
-                                Technology is evolving faster than ever, transforming the way we
-                                work and live. In this dynamic landscape, it’s not just new tech
-                                trends that are reshaping the future, but the very roles of IT
-                                professionals themselves. According to{" "}
-                                <a href="#" className="article-link">
-                                    Gartner’s research on strategic technology trends
-                                </a>
-                                , the most influential innovations are expected to disrupt
-                                industries and accelerate business success in the coming years.
+                                Open-source software has become a prime target in the escalating wave of cybersecurity threats. As attacks grow more sophisticated, the open-source community is racing to close critical security gaps and stop malicious code before it spreads.With open-source code used in most commercial software, infection risks are rampant across most industries. It is indispensable and dangerously neglected, remarked Jason
                             </p>
-                            <button type="button" className="read-more-btn">
-                                Read More
+                            <button type="button" className="read-more-btn"><a href="/blog1" className="read-more-link">Read More</a>
+
                             </button>
                         </div>
                     </div>
@@ -105,7 +97,8 @@ const BlogHome = () => {
                         Llama 4 Scout, or Llama 4 Maverick—or any combination of these
                         cutting-edge tools—within just 24 hours.
                     </p>
-                    <button className="reead-more">Read More</button>
+                    <button className="reead-more"><a href="/blog2" className="read-more-link">Read More</a>
+                    </button>
                 </article>
 
                 <article className="news-article">

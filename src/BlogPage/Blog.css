@@ -1,5 +1,7 @@
 .blog-home {
     background: url(./unblurimageai_unblur_a9f77c579dbe87ccbb478dbd85193386.png);
+    background-position: center;
+    height: 90vh;
 }
 
 .hero-image-container {
