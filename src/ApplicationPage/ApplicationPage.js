@@ -93,7 +93,7 @@ const ApplicationPage = () => {
       alert("Please enter at least 200 characters for why you want to join Nuvoro Academy.");
       return;
     }
-    if (formData.reason2.trim().length > 200) {
+    if (formData.reason2.trim().length < 200) {
       alert("Please enter at least 200 characters how you heard about Nuvoro Academy.");
       return;
     }
@@ -260,14 +260,14 @@ const ApplicationPage = () => {
           placeholder="Why do you want to join Nuvoro Academy?"
           value={formData.reason1}
           onChange={handleChange}
-          className={formData.reason1.trim().length < 200 ? "textarea-error" : ""}
-          maxLength={900}
+          className={formData.reason1.trim().length > 200 ? "textarea-error" : ""}
+          maxLength={200}
           required
         ></textarea>
         <p className="word-limit">
           {formData.reason1.trim().length} /  (minimum 200)
         </p>
-        {formData.reason1.trim().length > 0 && formData.reason1.trim().length < 200 && (
+        {formData.reason1.trim().length > 0 && formData.reason1.trim().length > 200 && (
           <p className="error-message">Please enter at least 200 characters.</p>
         )}
 
@@ -275,7 +275,7 @@ const ApplicationPage = () => {
 
 
         <div className="upload-section">
-          <p className='form-text'> Upload CV or Portfolio (optional)</p>
+          <p className='form-text'> Upload CV or Portfolio</p>
           <label htmlFor="cvUpload" className="upload-button">
             Upload Here
           </label>
@@ -299,14 +299,14 @@ const ApplicationPage = () => {
           placeholder="How did you know about Nuvoro Academy? (required)"
           value={formData.reason2}
           onChange={handleChange}
-          className={formData.reason2.trim().length < 200 ? "textarea-error" : ""}
-          maxLength={900}
+          className={formData.reason2.trim().length > 200 ? "textarea-error" : ""}
+          maxLength={200}
           required
         ></textarea>
         <p className="word-limit">
           {formData.reason2.trim().length} / (minimum 200)
         </p>
-        {formData.reason2.trim().length > 0 && formData.reason1.trim().length < 200 && (
+        {formData.reason2.trim().length > 0 && formData.reason2.trim().length > 200 && (
           <p className="error-message">Please enter at least 200 characters.</p>
         )}
 

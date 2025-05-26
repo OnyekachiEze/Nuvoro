@@ -182,7 +182,7 @@ const ServiceHome = () => {
                         </ul>
                     </div>
 
-                    <div className="scroll-service-cardd uiux">
+                    <div className="scroll-service-cardd software">
                         <h2>Web / App<br />Development</h2>
                         <p>
                             We craft high-performance, secure, and scalable web solutions tailored to your business needs.
@@ -212,7 +212,7 @@ const ServiceHome = () => {
                     </div>
 
 
-                    <div className="scroll-service-cardd uiux">
+                    <div className="scroll-service-cardd software">
                         <h2>Development<br />Operations</h2>
                         <p>
                             We integrate DevOps practices into your workflow to streamline development, enhance collaboration, and deliver high-quality software faster and more reliably.
@@ -243,7 +243,7 @@ const ServiceHome = () => {
                     </div>
 
 
-                    <div className="scroll-service-cardd uiux">
+                    <div className="scroll-service-cardd software">
                         <h2>Consulting <br />and Support</h2>
                         <p>
                             At Nuvoro, we provide tailored consultation and dedicated support to ensure your technology initiatives succeed from planning to execution and beyond.
@@ -273,7 +273,7 @@ const ServiceHome = () => {
                     </div>
 
 
-                    <div className="scroll-service-cardd uiux">
+                    <div className="scroll-service-cardd software">
                         <h2>Tech<br />Education</h2>
                         <p>
                             Nuvoro Academy is a cutting-edge learning platform designed to equip professionals and businesses with in-demand tech skills through hands-on, industry-aligned training.
@@ -281,7 +281,7 @@ const ServiceHome = () => {
                         <ul>
                             <li>Industry-Driven Curriculum Courses in UIUX  DevOps, Cloud, Product Design, and more.</li>
                             <li>Learn by Doing  real-world projects, labs, and case studies.</li>
-                            <li>Self-paced or instructor-led programs.  Certification & Career Support.</li>
+                            <li>Self-paced or instructor-led programs. Certification & Career Support.</li>
 
                         </ul>
                     </div>
@@ -289,22 +289,22 @@ const ServiceHome = () => {
                     <div className="scroll-service-cardd uiux">
                         <h2>Testing and<br /> Quality Assurance</h2>
                         <p>
-                        Ensure software is reliable, secure, and user-friendly by systematically identifying and fixing defects before release.                        </p>
-                    <ul>
-                        <li>Tools: Jira, TestRail, qTest, Selenium Appium, Espresso (Android), XCUITest (iOS)</li>
-                        <li>Unit Testing: Developer-level such as, Jest, JUnit.</li>
-                    <li>Performance: Load, stress, scalability – JMeter, Gatling</li>
-                    
+                            Ensure software is reliable, secure, and user-friendly by systematically identifying and fixing defects before release.                        </p>
+                        <ul>
+                            <li>Tools: Jira, TestRail, qTest, Selenium Appium, Espresso (Android), XCUITest (iOS)</li>
+                            <li>Unit Testing: Developer-level such as, Jest, JUnit.</li>
+                            <li>Performance: Load, stress, scalability – JMeter, Gatling</li>
+
                         </ul>
                     </div>
-                
-            
-               
 
- 
-         
-</div>
-  <div className="dots">
+
+
+
+
+
+                </div>
+                <div className="dots">
                     <span className="active-dot"></span>
                     <span></span>
                     <span></span>

@@ -156,7 +156,7 @@ textarea {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #1C1C3A;
+    background-color: #7b7bac;
     transition: 0.4s;
     border-radius: 30px;
 }
@@ -211,7 +211,7 @@ textarea {
 }
 
 
-/* 
+
 .popup {
   position: fixed;
   top: 20%;
@@ -265,7 +265,7 @@ textarea {
   100% {
     transform: scale(1.2);
   }
-} */
+} 
 
 
 
