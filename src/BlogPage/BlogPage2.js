@@ -104,11 +104,11 @@ const BlogPage2 = () => {
                     </p>
                 </article>
 
-                <article>
+                {/* <article>
                     <p>
                         For more information, visit the <a href="https://llama.ai" target="_blank" rel="noopener noreferrer">official Llama website</a> and follow our social media channels for announcements and resources.
                     </p>
-                </article>
+                </article> */}
             </main>
             <Footer />
 

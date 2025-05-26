@@ -93,8 +93,9 @@ const BlogPage1 = () => {
                     </blockquote>
                 </section>
 
-                <Footer />
             </div>
+            <Footer />
+
         </div>
 
 

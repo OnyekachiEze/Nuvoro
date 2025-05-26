@@ -25,7 +25,6 @@
 
 .text-area h2 {
   font-size: 3.5rem;
-  color: ;
   font-weight: 700;
   margin-bottom: 1rem;
 }
@@ -34,6 +33,69 @@
   font-size: 1.3rem;
   color: #EFEFEF;
   line-height: 1.6rem;
+}
+
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+  .services-section {
+    padding: 2rem 3rem;
+  }
+
+  .text-area {
+    margin: 3rem 3rem;
+  }
+
+  .text-area h2 {
+    font-size: 2.8rem;
+  }
+
+  .text-area p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-hero {
+    height: 70vh;
+    background-position: top center;
+  }
+
+  .services-section {
+    padding: 2rem;
+  }
+
+  .text-area {
+    margin: 2rem 1.5rem;
+  }
+
+  .text-area h2 {
+    font-size: 2.2rem;
+  }
+
+  .text-area p {
+    font-size: 1rem;
+    line-height: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-hero {
+    height: 60vh;
+  }
+
+  .text-area {
+    margin: 2rem 1rem;
+  }
+
+  .text-area h2 {
+    font-size: 1.8rem;
+  }
+
+  .text-area p {
+    font-size: 0.95rem;
+    line-height: 1.3rem;
+  }
 }
 
 
@@ -476,40 +538,6 @@
 
 
 @media (max-width: 768px) {
-
-  /* Services hero section */
-  .services-hero {
-    height: 60vh;
-    background-size: contain;
-    padding: 1rem;
-    transition: height 0.4s ease, padding 0.4s ease;
-  }
-
-  /* Services section layout */
-  .services-section {
-    flex-direction: column;
-    padding: 2rem 1rem;
-    float: none;
-    text-align: center;
-    transition: padding 0.4s ease;
-  }
-
-  /* Text area adjustments */
-  .text-area {
-    margin: 2rem 1rem;
-    max-width: 100%;
-    transition: margin 0.4s ease;
-  }
-
-  .text-area h2 {
-    font-size: 2.2rem;
-    transition: font-size 0.4s ease;
-  }
-
-  .text-area p {
-    font-size: 1rem;
-    transition: font-size 0.4s ease;
-  }
 
   /* Services container */
   .services-container {
