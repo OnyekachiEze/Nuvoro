@@ -272,19 +272,21 @@
   padding: 2rem;
   flex-wrap: wrap;
   margin-top: 3rem;
-
+  margin-left: 6rem;
 }
 
 .work-image img {
   width: 100%;
   max-width: 500px;
   border-radius: 8px;
+
 }
 
 .work-steps {
   flex: 1;
   min-width: 250px;
-  margin-left: 8rem;
+  margin-left: 14rem;
+  margin-top: 4rem;
 }
 
 .how-we-work h2 {

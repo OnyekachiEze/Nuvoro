@@ -169,7 +169,7 @@
     gap: 1.5rem;
     overflow-x: hidden;
     /* hide scrollbar */
-    animation: scroll-left 30s linear infinite;
+    /* animation: scroll-left 30s linear infinite; */
     /* prevent vertical scroll */
     padding-bottom: 1rem;
 }
@@ -556,7 +556,7 @@
 
 
 .quote-banner-container {
-  background-color: #00bcd4;
+  background-color: #1C1C3A;
   color: white;
   padding: 1.5rem;
   border-radius: 0.5rem;

@@ -59,7 +59,7 @@ const Navbar = () => {
                     {popupOpen && (
                         <div className="popup-menu-mobile">
                             <a href="/services" className="popup-link">🔧 Want our services</a>
-                            <a href="/consultation" className="popup-link">💬 Consultation</a>
+                            <a href="/academy" className="popup-link">Academy</a>
                         </div>
                     )}
                 </div>

@@ -34,7 +34,7 @@ function Footer() {
 
                     <div className="footer-links">
                         <div className="footer-column">
-                            <h3>Navigation</h3>
+                            {/* <h3>Navigation</h3> */}
                             <ul>
                                 <li><a href="./">Home</a></li>
                                 <li><a href="/about">About us</a></li>

@@ -290,7 +290,21 @@
 
 .news-link {
     color: #2563eb;
-    text-decoration: underline;
+    text-decoration: none;
+}
+
+.news-link2 {
+    color: white;
+    text-decoration: none;
+}
+.news-link3 {
+    color: #1b2a5b;
+    text-decoration: none;
+}
+.news-link4 {
+    color: white;
+    background-color: #2563eb;
+    text-decoration: none;
 }
 
 .news-link:hover {

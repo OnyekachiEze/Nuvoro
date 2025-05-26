@@ -166,7 +166,7 @@ const AcademyHome = () => {
                         </p>
                         <div className="academy-cta-buttons">
                             <button className="academy-explore-button">Explore Courses</button>
-                            <button className="academy-apply-button"> <a href="/application" className='read-more-link'>Apply Now</a> </button>
+                            <button className="academy-apply-button"> <a href="/application" className='read-more-link' id='make-white'>Apply Now</a> </button>
                                
                         </div>
                     </div>

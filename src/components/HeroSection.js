@@ -78,7 +78,7 @@ const HeroSection = () => {
                             Driven by a shared vision, a team of relentless innovators founded Nuvoro - a tech powerhouse bridging imagination and digital excellence through app development, software engineering, and full-stack solutions. Their elite UI/UX designers sculpted intuitive, captivating experiences, while their engineers delivered scalable, future-proof systems for global clients.
                         </p>
 
-                        <button className="read-more-btn">Read More</button>
+                        <button className="read-more-btn"><a href="/about" className="news-link2">Read More</a></button>
                     </div>
                 </div>
             </div>

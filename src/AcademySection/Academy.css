@@ -3,6 +3,9 @@
     background-size: cover;
     background-position: center;
 }
+#make-white {
+    color: white;
+}
 
 .academy-tech-banner {
 
@@ -214,10 +217,11 @@
 }
 
 .about-image {
-    width: 500px;
+    width: 550px;
     height: 350px;
     object-fit: cover;
     border-radius: 0.5rem;
+    margin-left: 4rem;
 }
 
 

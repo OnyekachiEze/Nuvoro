@@ -33,7 +33,8 @@ const testimonials = [
     {
         name: "Rita",
         img: "/test1.png",
-        bgColor: "#555ba1",
+        // bgColor: "#555ba1",
+        bgColor: "#d9d9d9",
         textColor: "white",
         stars: 5,
         halfStar: false,
@@ -193,14 +194,14 @@ const Industries = () => {
 
 
             <section className="technology-section">
-                <h2 className="section-title">Technology we Use</h2>
+                <h2 className="section-title">Tech Stack</h2>
                 <div className='tech-grid'>
                     <div className="technology-image-wrapper">
-                        <h1 className='tech-title'>Back End Languages</h1>
+                        <h1 className='tech-title'>Back End Frame Works</h1>
                         <img src="/code1.png" alt="Technology we use" className="tech-image" />
                     </div>
                     <div className="technology-image-wrapper">
-                        <h1 className='tech-title'>Front End Languages</h1>
+                        <h1 className='tech-title'>Front End Frame Works</h1>
                         <img src="/code2.png" alt="Technology we use" className="tech-image" />
                     </div>
                 </div>

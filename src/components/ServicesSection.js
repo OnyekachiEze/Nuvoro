@@ -23,7 +23,7 @@ const ServicesSection = () => {
               </div>
               <div className="carrd-content">{service.description}</div>
               <div className="carrd-footer">
-                <button className="read-more-btn">Read More</button>
+                <button className="read-more-btn"><a href="/services" className="news-link3">Read More</a></button>
               </div>
             </div>
           ))}
@@ -39,8 +39,8 @@ const ServicesSection = () => {
             Nuvoro Academy is a premier tech education initiative designed to equip aspiring developers and designers with in-demand skills through hands-on, industry-aligned training. Our bootcamp bridges the gap between talent and opportunity, empowering students to thrive in the digital economy.
           </p>
           <div className="button-container">
-            <button className="read-more-btnn">Read More</button>
-            <button className="register-btn">Register</button>
+            <button className="read-more-btnn"><a href="/academy" className="news-link2">Read More</a></button>
+            <button className="register-btn"><a href="/application" className="news-link3">Register</a></button>
           </div>
         </section>
 

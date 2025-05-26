@@ -1067,7 +1067,7 @@ body {
 
 
 .footer-wrapper {
-  background: linear-gradient(to right, #00E5FF, #1C1C3A);
+  background-color: #55559C;
   padding: 40px 20px;
   font-family: 'Roboto', sans-serif;
   color: white;
@@ -1147,7 +1147,7 @@ body {
   flex: 2;
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 8rem;
 }
 
 .footer-column {
