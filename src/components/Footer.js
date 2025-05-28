@@ -40,7 +40,9 @@ function Footer() {
                                 <li><a href="/about">About us</a></li>
                                 <li><a href="/services">Services</a></li>
                                 <li><a href="/academy">Academy</a></li>
-                                <li><a href="">Career</a></li>
+                                <li><a href="/portfolio">Portfolio</a></li>
+                                <li><a href="/blog">Blog</a></li>
+
                             </ul>
                         </div>
 

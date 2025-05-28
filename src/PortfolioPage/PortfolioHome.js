@@ -16,12 +16,12 @@ const PortfolioHome = () => {
                     </p> */}
                     <div className="banner-buttons">
                         <button className="btn-primary">Book a free Consultation</button>
-                        <button className="btn-secondary">See More Project</button>
+                        <button className="btn-secondary"><a href='#projects'>See More Project</a> </button>
                     </div>
                 </div>
             </div>
 
-            <main className="portfolio-container">
+            <main className="portfolio-container" id='projects'>
                 <h1 className="portfolio-heading">Successful Projects</h1>
                 <section className="portfolio-project-section">
                     <div className="portfolio-image-wrapper">

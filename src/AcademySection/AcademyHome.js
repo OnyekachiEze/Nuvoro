@@ -305,7 +305,7 @@ const AcademyHome = () => {
                         <h3 className="track-header">Advanced Class</h3>
                         <p className="track-taglinee">Ready to rise to the apex  in the tech world?</p>
                         <p>Build projects that mirror real industry challenges</p>
-                        <p>Get portfolio pieces that make recruiters stop scrolling</p>
+                        <p>Get portfolio pieces that make recruiters stop <span id='white'>ijdhuiiehfi</span>  scrolling</p>
                         <p>Acquire adequate knowledge and skills as you prepare for internship</p>
                         <p>Mastering production-grade tools</p>
                         <div className="track-footer" />

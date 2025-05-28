@@ -64,11 +64,21 @@
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
+
+    a{
+        color: white;
+        text-decoration: none;
+    }
 }
 
 .btn-secondary:hover {
     background-color: white;
     color: #111;
+
+     a{
+        color: #1C1C3A;
+        text-decoration: none;
+    }
 }
 
 /* Responsive */

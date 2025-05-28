@@ -875,7 +875,11 @@ body {
 
 .track {
   display: inline-flex;
-  animation: scroll-left 30s linear infinite;
+  animation: scroll-left 63s linear infinite;
+}
+
+#white {
+  color: white;
 }
 
 .testimonial {
@@ -998,7 +1002,7 @@ body {
 
 .image-track {
   display: inline-flex;
-  animation: scroll-images 25s linear infinite;
+  animation: scroll-images 15s linear infinite;
 }
 
 .image-item {
