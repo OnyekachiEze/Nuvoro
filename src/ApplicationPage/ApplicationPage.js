@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import Navbar from '../components/Navbar';
 import countryStateData from "./countryStateData.json";
 import './ApplicationPage.css';
+import emailjs from '@emailjs/browser';
+
 
 const ApplicationPage = () => {
   const [formData, setFormData] = useState({
@@ -58,72 +60,111 @@ const ApplicationPage = () => {
     return age;
   };
 
-  const handleChange = (e) => {
-    const { name, value, type, checked, files } = e.target;
+ const [uploadedFile, setUploadedFile] = useState(null);
 
-    if (name === "cv" && files.length > 0) {
-      setUploadedFileName(files[0].name);
-    }
+const handleChange = (e) => {
+  const { name, value, type, checked, files } = e.target;
 
-    setFormData((prev) => ({
-      ...prev,
-      [name]: type === "checkbox" ? checked : value,
-    }));
+  if (name === "cv" && files.length > 0) {
+    const file = files[0];
+    setUploadedFileName(file.name);
 
-    if (name === "dob") {
-      const age = calculateAge(value);
-      if (age < 15) {
-        setAgeError("You must be at least 15 years old to apply.");
-      } else {
-        setAgeError("");
-      }
-    }
-  };
+    // Read file as base64
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      setUploadedFile(reader.result); // base64 string
+    };
+    reader.readAsDataURL(file);
+  }
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  setFormData((prev) => ({
+    ...prev,
+    [name]: type === "checkbox" ? checked : value,
+  }));
 
-    const age = calculateAge(formData.dob);
+  if (name === "dob") {
+    const age = calculateAge(value);
     if (age < 15) {
       setAgeError("You must be at least 15 years old to apply.");
-      return;
+    } else {
+      setAgeError("");
     }
+  }
+};
 
-    if (formData.reason1.trim().length < 200) {
-      alert("Please enter at least 200 characters for why you want to join Nuvoro Academy.");
-      return;
-    }
-    if (formData.reason2.trim().length < 200) {
-      alert("Please enter at least 200 characters how you heard about Nuvoro Academy.");
-      return;
-    }
 
-    if (!formData.agree) {
-      alert("You must agree to the terms and privacy policy.");
-      return;
-    }
+const handleSubmit = (e) => {
+  e.preventDefault();
 
-    setShowPopup(true);
+  const age = calculateAge(formData.dob);
+  if (age < 15) {
+    setAgeError("You must be at least 15 years old to apply.");
+    return;
+  }
 
-    setTimeout(() => {
-      setShowPopup(false);
-      setFormData({
-        fullName: "",
-        email: "",
-        phone: "",
-        dob: "",
-        city: "",
-        country: "",
-        state: "",
-        course: "",
-        experience: "",
-        reason1: "",
-        reason2: "",
-        agree: false,
-      });
-      setUploadedFileName("");
-    }, 3000);
-  };
+  if (formData.reason1.trim().length < 200) {
+    alert("Please enter at least 200 characters for why you want to join Nuvoro Academy.");
+    return;
+  }
+
+  if (formData.reason2.trim().length < 200) {
+    alert("Please enter at least 200 characters how you heard about Nuvoro Academy.");
+    return;
+  }
+
+  if (!formData.agree) {
+    alert("You must agree to the terms and privacy policy.");
+    return;
+  }
+
+ const templateParams = {
+  full_name: formData.fullName,
+  email: formData.email,
+  phone: formData.phone,
+  dob: formData.dob,
+  state: formData.state,
+  country: formData.country,
+  course: formData.course,
+  experience: formData.experience,
+  reason1: formData.reason1,
+  reason2: formData.reason2,
+  cv_file_name: uploadedFileName,
+  cv_file_data: uploadedFile, // base64 content, optional, depends on your template
+};
+
+
+  emailjs.send(
+    "service_ve7r6cd",      // Replace with your actual Service ID
+    "template_4ffyt9o",     // Replace with your actual Template ID
+    templateParams,
+    "h8yBYe52uixzYr2AV"       // Replace with your actual Public Key
+  )
+    .then(() => {
+      setShowPopup(true);
+      setTimeout(() => {
+        setShowPopup(false);
+        setFormData({
+          fullName: "",
+          email: "",
+          phone: "",
+          dob: "",
+          city: "",
+          country: "",
+          state: "",
+          course: "",
+          experience: "",
+          reason1: "",
+          reason2: "",
+          agree: false,
+        });
+        setUploadedFileName("");
+      }, 3000);
+    })
+    .catch((error) => {
+      console.error("Email send error:", error);
+      alert("Something went wrong. Please try again later.");
+    });
+};
 
 
   return (
