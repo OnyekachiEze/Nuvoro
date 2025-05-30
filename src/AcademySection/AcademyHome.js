@@ -165,7 +165,7 @@ const AcademyHome = () => {
                             mentorship from industry experts
                         </p>
                         <div className="academy-cta-buttons">
-                            <button className="academy-explore-button">Explore Courses</button>
+                            <button className="academy-explore-button"><a href='#courses'>Explore Courses</a></button>
                             <button className="academy-apply-button"> <a href="/application" className='read-more-link' id='make-white'>Apply Now</a> </button>
                                
                         </div>
@@ -364,7 +364,7 @@ const AcademyHome = () => {
 
 
             <section className="courses-container">
-                <h2 className="section-title">Courses Offered</h2>
+                <h2 className="section-title" id='courses'>Courses Offered</h2>
                 <p className="section-subtitle">
                     Nuvoro Academy provides a range of specialized courses tailored to<br />
                     high-demand areas in tech:

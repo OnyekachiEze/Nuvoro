@@ -59,6 +59,11 @@
 .academy-explore-button {
     background-color: #ff2b6b;
     color: white;
+
+    a{
+        text-decoration: none;
+        color: white;
+    }
 }
 
 .academy-explore-button:hover {
