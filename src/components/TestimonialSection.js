@@ -36,7 +36,7 @@ const Testimonialsection = () => {
         <div className="track">
           {[...testimonials, ...testimonials].map((testimonial, index) => (
             <div className="testimonial" key={index}>
-              <img src={testimonial.image} alt={testimonial.name} className="testimonial-img" />
+              <img src={testimonial.image} alt={testimonial.name} className="testimmonial-img" />
               <div className="testimonial-text">
                 <p>"{testimonial.message}"</p>
                 <h4>- {testimonial.name}</h4>

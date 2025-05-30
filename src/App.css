@@ -901,11 +901,11 @@ body {
   transform: scale(1.03);
 }
 
-.testimonial-img {
+.testimmonial-img {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  object-fit: cover;
+  object-fit: fill;
   border: 3px solid #ddd;
 }
 
@@ -947,7 +947,7 @@ body {
     gap: 1rem;
   }
 
-  .testimonial-img {
+  .testimmonial-img {
     width: 80px;
     height: 80px;
   }
@@ -968,7 +968,7 @@ body {
     padding: 1rem;
   }
 
-  .testimonial-img {
+  .testimmonial-img {
     width: 60px;
     height: 60px;
   }
