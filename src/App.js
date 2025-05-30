@@ -12,6 +12,15 @@ import PortfolioPage from './PortfolioPage/PortfolioPage';
 import ApplicationPage from './ApplicationPage/ApplicationPage';
 import BlogPage1 from './BlogPage/BlogPage1';
 import BlogPage2 from './BlogPage/BlogPage2';
+import BlogPage3 from './BlogPage/BlogPage3';
+import GoogleNewsBlog from './BlogPage/GoogleNewsBlog';
+import SpiesNewsBlog from './BlogPage/SpiesNewsBlog';
+import MotoRazrReview from './BlogPage/MotoRazrReview'
+import MicrosoftSurfaceNews from './BlogPage/MicrosoftSurfaceNews';
+import ArmsRoboticLimbsNews from './BlogPage/ArmsRoboticLimbsNews';
+
+
+
 
 
 
@@ -65,6 +74,14 @@ const App = () => {
         <Route path="/application" element={<ApplicationPage />} />
         <Route path="/blog1" element={<BlogPage1 />} />
         <Route path="/blog2" element={<BlogPage2 />} />
+        <Route path="/blog3" element={<BlogPage3 />} />
+        <Route path="/GoogleNewsBlog" element={<GoogleNewsBlog />} />
+        <Route path="/SpiesNewsBlog" element={<SpiesNewsBlog />} />
+        <Route path="/MotoRazrReview" element={<MotoRazrReview />} />
+        <Route path="/MicrosoftSurfaceNews" element={<MicrosoftSurfaceNews />} />
+        <Route path="/ArmsRoboticLimbsNews" element={<ArmsRoboticLimbsNews />} />
+
+
         {/* Add more routes as needed */}
     
       </Routes>

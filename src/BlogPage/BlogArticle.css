@@ -1,0 +1,127 @@
+.blog3-background {
+  background: linear-gradient(135deg, #f0f4f8, #e0e7ff);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 34rem;
+}
+
+.blog3-news-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f9f9fb;
+  color: #1e1e2f;
+  line-height: 1.7;
+}
+
+.blog3-news-container h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: #0b3d91;
+  border-left: 4px solid #0b3d91;
+  padding-left: 0.5rem;
+}
+
+.blog3-news-container p {
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+}
+
+.blog3-news-container blockquote {
+  font-style: italic;
+  border-left: 5px solid #ffa500;
+  padding-left: 1rem;
+  margin: 1rem 0;
+  color: #444;
+  background: #fff8e1;
+}
+
+.blog3-news-container ul {
+  padding-left: 1.2rem;
+  list-style-type: disc;
+}
+
+.blog3-news-container li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.news3-title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #212121;
+}
+
+.news3-blogheader,
+.article3 {
+  margin-bottom: 2.5rem;
+  background: white;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s;
+}
+
+.news3-blogheader:hover,
+.article3:hover {
+  transform: scale(1.01);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .blog3-news-container {
+    padding: 1.5rem 1rem;
+    max-width: 90%;
+  }
+
+  .news3-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .blog3-news-container p,
+  .blog3-news-container li {
+    font-size: 1rem;
+  }
+
+  .news3-blogheader,
+  .article3 {
+    padding: 1rem 1.2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .blog3-background {
+    height: auto;
+    padding: 2rem 1rem;
+    margin-top: 0rem;
+  }
+
+  .blog3-news-container {
+    max-width: 100%;
+    padding: 1rem 0.8rem;
+  }
+
+  .news3-title {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .blog3-news-container p,
+  .blog3-news-container li {
+    font-size: 0.95rem;
+  }
+
+  .news3-blogheader,
+  .article3 {
+    padding: 1rem;
+    margin-bottom: 1.8rem;
+  }
+}

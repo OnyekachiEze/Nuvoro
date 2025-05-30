@@ -120,7 +120,7 @@ const BlogHome = () => {
                         new for-profit subsidiary, now being restructured as a Public Benefit
                         Corporation (PBC).
                     </p>
-                    <button className="reead-more">Read More</button>
+                    <button className="reead-more"><a href="/blog3" className="read-more-link">Read More</a> </button>
                 </article>
             </main>
 
@@ -128,24 +128,28 @@ const BlogHome = () => {
             <div className="news-container">
                 <div className="news-left">
                     <div className="news-item">
-                        <img
+                        <a href="/GoogleNewsBlog" className="read-more-link"><img
                             src="/news1.png"
                             alt="Google logo white text on black background"
                             className="news-image"
                         />
-                        <p className="news-description">
-                            Google testing AI Mode on homepage, potentially replacing "I'm Feeling Lucky"
-                        </p>
+                            <p className="news-description">
+                                Google testing AI Mode on homepage, potentially replacing "I'm Feeling Lucky"
+                            </p></a>
+
                     </div>
                     <div className="news-item">
-                        <img
-                            src="/news2.png"
-                            alt="Red warning signs and blue keyboard on a digital screen representing hacking"
-                            className="news-image"
-                        />
-                        <p className="news-description">
-                            Spies hack high-value mail servers using an exploit from yesteryear
-                        </p>
+                        <a href="/SpiesNewsBlog" className="read-more-link">
+                            <img
+                                src="/news2.png"
+                                alt="Red warning signs and blue keyboard on a digital screen representing hacking"
+                                className="news-image"
+                            />
+                            <p className="news-description">
+                                Spies hack high-value mail servers using an exploit from yesteryear
+                            </p>
+                        </a>
+
                     </div>
                 </div>
 
@@ -156,14 +160,18 @@ const BlogHome = () => {
                             alt="Motorola Razr and Razr Ultra phones on red background"
                             className="thumb-image"
                         />
-                        <div className="thumb-content">
-                            <h3 className="thumb-title">
-                                Motorola Razr and Razr Ultra (2025) review: Cool as hell, but too much AI
-                            </h3>
-                            <p className="thumb-text">
-                                The new Razrs are sleek, capable, and overflowing with AI features.
-                            </p>
-                        </div>
+                        <a href="/MotoRazrReview" className="read-more-link">
+
+                            <div className="thumb-content">
+                                <h3 className="thumb-title">
+                                    Motorola Razr and Razr Ultra (2025) review: Cool as hell, but too much AI
+                                </h3>
+                                <p className="thumb-text">
+                                    The new Razrs are sleek, capable, and overflowing with AI features.
+                                </p>
+                            </div>
+                        </a>
+
                     </div>
 
                     <div className="news-right-item">
@@ -172,14 +180,17 @@ const BlogHome = () => {
                             alt="Microsoft Surface Laptop Studio 2 on blue background"
                             className="thumb-image"
                         />
-                        <div className="thumb-content">
-                            <h3 className="thumb-title">
-                                Microsoft’s Surface lineup reportedly losing another of its most interesting designs
-                            </h3>
-                            <p className="thumb-text">
-                                Surface Laptop Studio 2 is reportedly no longer being manufactured.
-                            </p>
-                        </div>
+                        <a href="/MicrosoftSurfaceNews" className="read-more-link">
+                            <div className="thumb-content">
+                                <h3 className="thumb-title">
+                                    Microsoft’s Surface lineup reportedly losing another of its most interesting designs
+                                </h3>
+                                <p className="thumb-text">
+                                    Surface Laptop Studio 2 is reportedly no longer being manufactured.
+                                </p>
+                            </div>
+                        </a>
+
                     </div>
 
                     <div className="news-right-item">
@@ -188,14 +199,17 @@ const BlogHome = () => {
                             alt="Person with robotic limbs on blue background"
                             className="thumb-image"
                         />
-                        <div className="thumb-content">
-                            <h3 className="thumb-title">
-                                6 Arms, 3 Thumbs: I Tested The Future of Robotic Limbs
-                            </h3>
-                            <p className="thumb-text">
-                                Surface Laptop Studio 2 is reportedly no longer being manufactured.
-                            </p>
-                        </div>
+                        <a href="/ArmsRoboticLimbsNews" className="read-more-link">
+                            <div className="thumb-content">
+                                <h3 className="thumb-title">
+                                    6 Arms, 3 Thumbs: I Tested The Future of Robotic Limbs
+                                </h3>
+                                <p className="thumb-text">
+                                    Surface Laptop Studio 2 is reportedly no longer being manufactured.
+                                </p>
+                            </div>
+                        </a>
+
                     </div>
                 </div>
             </div>
