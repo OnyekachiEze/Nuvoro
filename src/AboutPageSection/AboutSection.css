@@ -1,18 +1,18 @@
+/* === IMPORT FONTS === */
+
+/* === ABOUT HERO === */
 .about-hero {
-  background: url(./unblurimageai_unblur_d5b5e0535ebd85892b636194f15ef16c.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: url(./unblurimageai_unblur_d5b5e0535ebd85892b636194f15ef16c.png) no-repeat center/cover;
   height: 90vh;
 }
 
+/* === ABOUT NUVORO SECTION === */
 .about-nuvoro {
   padding: 100px 30px;
   color: #ffffff;
   position: relative;
   overflow: hidden;
   text-align: center;
-
 }
 
 .about-nuvoro::before,
@@ -66,40 +66,22 @@
   color: #1C1C3A;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .about-content h2 {
-    font-size: 2rem;
-  }
-
-  .about-content p {
-    font-size: 1rem;
-  }
-}
-
-
-
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-
+/* === WHO WE ARE SECTION === */
 .whoWeAre-bg {
   min-height: 100vh;
   font-family: 'Inter', sans-serif;
   padding: 3rem 1.5rem;
-  box-sizing: border-box;
 }
 
 .container {
   max-width: 96rem;
-  /* about 1536px */
   margin: 0 auto;
   padding: 0 1.5rem;
-  box-sizing: border-box;
 }
 
 .content-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   gap: 3rem;
 }
 
@@ -107,15 +89,29 @@
   .content-wrapper {
     flex-direction: row;
     align-items: center;
-    gap: 3rem;
   }
+
+  .whoWeAre-bg {
+    margin: 0;
+  }
+}
+
+.image-section {
+  flex: 1;
+  max-width: 36rem;
+  margin: 0 auto;
+}
+
+.image-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px
 }
 
 .text-section {
   flex: 1;
-  line-height: 3rem;
   max-width: 36rem;
-  /* about 576px */
 }
 
 .text-section h2 {
@@ -144,23 +140,9 @@
   display: block;
 }
 
-@keyframes float {
-  0% {
-    transform: translateY(0px);
-  }
-
-  50% {
-    transform: translateY(-15px);
-  }
-
-  100% {
-    transform: translateY(0px);
-  }
-}
-
+/* === OUR STORY === */
 .our-story-section {
   padding: 5rem 2rem;
-  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -182,33 +164,29 @@
 }
 
 .our-story-images {
-  /* display: grid; */
-  grid-template-columns: repeat(2, 1fr);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 1.2rem;
   flex: 1;
-  perspective: 1000px;
 }
 
 .image-card {
-  position: relative;
   border-radius: 1rem;
   overflow: hidden;
-  /* border: 2px solid #00f0ff; */
-  /* box-shadow:
-    0 10px 25px rgba(0, 255, 255, 0.2),
-    0 0 20px rgba(0, 255, 255, 0.3);
-  transition: transform 0.4s ease, box-shadow 0.3s ease; */
 }
 
 .image-card:hover {
   transform: scale(1.08) rotateZ(1deg);
-  /* box-shadow:
-    0 15px 35px rgba(0, 255, 255, 0.4),
-    0 0 30px rgba(0, 255, 255, 0.5); */
 }
 
 .floating-image {
   animation: float 4.5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
 }
 
 .image {
@@ -232,39 +210,35 @@
 
 .description {
   font-size: 1.15rem;
-  line-height: 3rem;
+  line-height: 2.2rem;
   color: #333;
-  /* background: rgba(255, 255, 255, 0.75); */
   padding: 1rem 1.25rem;
   border-radius: 0.75rem;
-  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); */
 }
 
-
-
-
+/* === MISSION VISION === */
 .mission-vision-container {
   max-width: 1200px;
   margin: 40px auto;
   display: flex;
   flex-direction: column;
-  gap: 9rem;
+  gap: 5rem;
   align-items: center;
+  padding: 2rem;
 }
 
 @media (min-width: 640px) {
   .mission-vision-container {
     flex-direction: row;
-    
   }
 }
 
 .card {
   background-color: #D9D9D9;
-  /* gray-300 */
   padding: 1.5rem;
   border-radius: 0.75rem;
   flex: 1;
+  width: 100%;
 }
 
 .icon-title {
@@ -277,7 +251,6 @@
   width: 2.5rem;
   height: 2.5rem;
   background: linear-gradient(to bottom right, #6b21a8, #db2777);
-  /* purple-700 to pink-500 */
   border-radius: 9999px;
   color: white;
   display: flex;
@@ -286,7 +259,7 @@
   font-size: 1.125rem;
 }
 
-.title {
+.card .title {
   margin-left: 0.75rem;
   font-family: 'Merriweather', serif;
   color: #1C1C3A;
@@ -294,17 +267,13 @@
   font-weight: bold;
 }
 
-.description {
+.card .description {
   color: #374151;
-  /* gray-700 */
-  /* font-size: 0.875rem; */
-  /* line-height: 1.6; */
 }
 
-
-
+/* === CORE VALUES === */
 .core-values-wrapper {
-  background-color: #e5e7eb; /* light gray */
+  background-color: #e5e7eb;
   padding: 2rem;
   display: flex;
   justify-content: center;
@@ -328,7 +297,7 @@
 }
 
 .value-box {
-  border: 1px solid #1f2937; /* gray-900 */
+  border: 1px solid #1f2937;
   padding: 0.75rem 1rem;
   border-radius: 8px;
   background-color: white;
@@ -338,10 +307,15 @@
   text-align: center;
   min-width: 180px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.value-box:hover {
+  transform: scale(1.05);
 }
 
 .center-box {
-  background-color: #0f172a; /* navy/dark-blue */
+  background-color: #0f172a;
   color: white;
   font-weight: bold;
   text-align: center;
@@ -349,4 +323,45 @@
   border-radius: 12px;
   font-size: 1.1rem;
   min-width: 160px;
+  transition: background-color 0.3s;
+}
+
+.center-box:hover {
+  background-color: #1e293b;
+}
+
+/* === RESPONSIVE TYPOGRAPHY === */
+@media (max-width: 768px) {
+  .about-content h2 {
+    font-size: 2rem;
+  }
+
+  .about-content p {
+    font-size: 1rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+    line-height: 1.8rem;
+  }
+
+  .card .title {
+    font-size: 1.5rem;
+  }
+
+  .card .description {
+    font-size: 0.95rem;
+  }
+
+  .text-section h2 {
+    font-size: 1.75rem;
+  }
+
+  .text-section p {
+    font-size: 0.95rem;
+  }
 }

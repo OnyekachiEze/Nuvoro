@@ -334,31 +334,69 @@
   top: 2.8rem;
 }
 
-@media (max-width: 768px) {
+/* Small devices (phones) */
+@media screen and (max-width: 600px) {
   .how-we-work {
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    margin-left: 0;
+    padding: 1rem;
+  }
+
+  .work-image img {
+    max-width: 100%;
+    height: auto;
   }
 
   .work-steps {
-    margin-left: 0rem;
-
+    margin-left: 0;
+    margin-top: 2rem;
   }
 
-  .work-steps ul {
-    padding-left: 0;
+  .how-we-work h2 {
+    font-size: 1.25rem;
+    text-align: center;
   }
 
-  .work-steps li {
-    justify-content: center;
-  }
-
-  .line {
-    left: 50%;
-    transform: translateX(-50%);
+  .text {
+    font-size: 0.95rem;
   }
 }
+
+/* Medium devices (tablets) */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  .how-we-work {
+    flex-direction: column;
+    margin-left: 0;
+    padding: 2rem;
+  }
+
+  .work-steps {
+    margin-left: 0;
+    margin-top: 3rem;
+  }
+
+  .how-we-work h2 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+}
+
+/* Large devices (desktops) */
+@media screen and (min-width: 1025px) {
+  .how-we-work {
+    flex-direction: row;
+    margin-left: 6rem;
+  }
+
+  .work-steps {
+    margin-left: 14rem;
+  }
+
+  .how-we-work h2 {
+    font-size: 1.5rem;
+  }
+}
+
 
 .services-industries-section {
   background-color: #f5f5f5;
@@ -524,138 +562,73 @@
 .scroll-buttons button:hover {
   background-color: #333;
 }
+/* Small devices (phones) */
+@media screen and (max-width: 600px) {
+  .services-industries-section {
+    padding: 2rem 1rem;
+  }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .service-cardd {
-    flex: 0 0 100%;
+  .services-industries-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .services-industry-card {
+    padding: 1.5rem;
+    max-width: 100%;
+  }
+
+  .scroll-service-cardd {
+    flex: 0 0 95%;
     max-width: 100%;
   }
 
   .scroll-buttons {
-    gap: 1rem;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .scroll-buttons button {
+    width: 100%;
+    font-size: 1.2rem;
   }
 }
 
-
-@media (max-width: 768px) {
-
-  /* Services container */
-  .services-container {
-    padding: 2rem 1rem;
-    transition: padding 0.4s ease;
+/* Medium devices (tablets) */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  .services-industries-section {
+    padding: 3rem 2rem;
   }
 
-  /* Services grid */
-  .services-gridd {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    max-width: 100%;
-    gap: 1rem;
-    transition: gap 0.3s ease;
+  .services-industries-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 
-  /* Service cards */
-  .service-card {
-    padding: 1rem;
-    font-size: 0.85rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, font-size 0.3s ease;
-  }
-
-  .service-card:hover,
-  .service-card:focus {
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
-    border-color: #6366f1;
-    outline: none;
-  }
-
-  /* Button input container */
-  .button-input-container {
-    min-height: auto;
-    padding: 1rem;
-    transition: padding 0.4s ease;
-  }
-
-  .button-input-box {
-    max-width: 100%;
-    opacity: 1;
-    transition: opacity 0.5s ease;
-  }
-
-  .button-input-field {
-    font-size: 1rem;
-    transition: font-size 0.3s ease, color 0.3s ease;
-  }
-
-  .button-input-btn {
-    font-size: 0.85rem;
-    padding: 0.5rem 1rem;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-  }
-
-  .button-input-btn:hover,
-  .button-input-btn:focus {
-    background-color: #1f2937;
-    transform: scale(1.05);
-    outline: none;
-  }
-
-  /* Services wrapper scroll container */
-  .services-wrapperr {
-    padding: 1rem;
-    transition: padding 0.4s ease;
-  }
-
-  .scroll-container {
-    gap: 0.75rem;
-    padding-bottom: 0.5rem;
-    transition: gap 0.3s ease, padding-bottom 0.3s ease;
-  }
-
-  .service-cardd {
-    flex: 0 0 100%;
-    max-width: 100%;
-    padding: 1rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .service-cardd:hover,
-  .service-cardd:focus {
-    transform: translateY(-7px) scale(1.04);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
-    outline: none;
-  }
-
-  .service-cardd h2 {
-    font-size: 1.1rem;
-    transition: font-size 0.4s ease;
-  }
-
-  .service-cardd p,
-  .service-cardd ul {
-    font-size: 0.85rem;
-    transition: font-size 0.4s ease;
-  }
-
-  /* Scroll buttons */
-  .scroll-buttons {
-    gap: 1rem;
-    justify-content: center;
-    margin-bottom: 1rem;
-    transition: gap 0.3s ease, margin-bottom 0.3s ease;
+  .scroll-service-cardd {
+    flex: 0 0 80%;
+    max-width: 60%;
   }
 
   .scroll-buttons button {
     font-size: 1.3rem;
-    padding: 0.4rem 0.8rem;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+}
+
+/* Large devices (desktops) */
+@media screen and (min-width: 1025px) {
+  .services-industries-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 
-  .scroll-buttons button:hover,
-  .scroll-buttons button:focus {
-    background-color: #333;
-    transform: scale(1.1);
-    outline: none;
+  .scroll-service-cardd {
+    flex: 0 0 40%;
+  }
+
+  .services-industries-section h2 {
+    font-size: 2.25rem;
+  }
+
+  .services-industry-card {
+    max-width: 300px;
   }
 }

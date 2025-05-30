@@ -174,3 +174,74 @@
         display: flex;
     }
 }
+
+/* Media Queries for Navbar Responsiveness */
+
+/* Mobile & Small Tablets */
+@media screen and (max-width: 768px) {
+  .navbar-container {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  .navbar-links-desktop {
+    display: none;
+  }
+
+  .get-started-btn-desktop {
+    display: none;
+  }
+
+  .navbar-toggle {
+    display: flex;
+  }
+
+  .navbar-logo img {
+    width: 110px;
+  }
+}
+
+/* Medium Screens - Tablets */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .navbar-container {
+    padding: 1rem 1.5rem;
+  }
+
+  .navbar-links-desktop {
+    gap: 1rem;
+  }
+
+  .get-started-btn-desktop {
+    padding: 0.5rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  .navbar-logo img {
+    width: 120px;
+  }
+}
+
+/* Large Screens - Desktop */
+@media screen and (min-width: 1025px) {
+  .navbar-container {
+    padding: 1rem 2rem;
+  }
+
+  .navbar-links-desktop {
+    display: flex;
+  }
+
+  .get-started-btn-desktop {
+    display: inline-block;
+  }
+
+  .navbar-toggle {
+    display: none;
+  }
+
+  .navbar-overlay {
+    display: none;
+  }
+}
+

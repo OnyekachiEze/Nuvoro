@@ -50,40 +50,30 @@ const PortfolioHome = () => {
             </main>
 
 
-            <div className="paytrackr-body">
-                <main className="paytrackr-container">
-                    <section className="paytrackr-content">
-                        <h1 className="paytrackr-title">Paytrackr Mobile App</h1>
-                        <div>
-                            <h2 className="paytrackr-subtitle">Overview</h2>
-                            <p className="paytrackr-description">
-                                PayTrackr is a cutting-edge personal finance app designed by Nuvoro to help users track expenses, optimize budgets, and save money effortlessly. By leveraging AI-driven insights and intuitive financial analytics, PayTrackr reminds customers on active subscriptions and recommends financial advices on subscribed apps as part of its financial goals.
-                            </p>
-                        </div>
-                        <button className="paytrackr-button">
-                            Easy Expense Tracking
-                        </button>
-                        <button className="paytrackr-button">
-                            Income Management
-                        </button>
-                        <button className="paytrackr-button">
-                            Bill Reminders & Due Dates
-                        </button>
-                        <p className="paytrackr-tech">
-                            <span className="font-semibold">Core Tech:</span> Figma, Ruby on Rails, Node.js, SQL
-                        </p>
+             <section className="second-paytrackr-wrapper">
+      <div className="second-paytrackr-text">
+        <h2 className="second-title">Paytrackr Mobile App</h2>
+        <h3 className="second-subtitle">Overview</h3>
+        <p className="second-description">
+          PayTrackr is a cutting-edge personal finance app designed by Nuvoro to help users track expenses,
+          optimize budgets, and save money effortlessly. By leveraging AI-driven insights and intuitive financial
+          analytics, PayTrackr reminds customers on active subscriptions and recommends financial advice on
+          subscribed apps as part of its financial goals.
+        </p>
+        <ul className="second-features">
+          <li>Easy Expense Tracking</li>
+          <li>Income Management</li>
+          <li>Bill Reminders & Due Dates</li>
+        </ul>
+        <p className="second-core-tech">
+          <strong>Core Tech:</strong> Figma, Ruby on Rails, Node.js, SQL
+        </p>
+      </div>
 
-                    </section>
-
-                    <section className="paytrackr-image-wrapper">
-                        <img
-                            src="/phone1.png"
-                            alt="Two mobile phones showing Paytrackr app screens with blue gradient background and diagonal lines"
-                            className="paytrackr-image"
-                        />
-                    </section>
-                </main>
-            </div>
+      <div className="second-paytrackr-image">
+        <img src="/phone1.png" alt="Paytrackr Mobile UI" />
+      </div>
+    </section>
 
             <section className="portfolio-project-section">
                 <div className="portfolio-image-wrapper">

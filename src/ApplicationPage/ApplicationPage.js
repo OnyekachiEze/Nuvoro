@@ -129,7 +129,7 @@ const handleSubmit = (e) => {
   reason1: formData.reason1,
   reason2: formData.reason2,
   cv_file_name: uploadedFileName,
-  cv_file_data: uploadedFile, // base64 content, optional, depends on your template
+  cv_file_data: uploadedFile, 
 };
 
 
