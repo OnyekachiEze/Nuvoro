@@ -60,111 +60,111 @@ const ApplicationPage = () => {
     return age;
   };
 
-  const [uploadedFile, setUploadedFile] = useState(null);
+ const [uploadedFile, setUploadedFile] = useState(null);
 
-  const handleChange = (e) => {
-    const { name, value, type, checked, files } = e.target;
+const handleChange = (e) => {
+  const { name, value, type, checked, files } = e.target;
 
-    if (name === "cv" && files.length > 0) {
-      const file = files[0];
-      setUploadedFileName(file.name);
+  if (name === "cv" && files.length > 0) {
+    const file = files[0];
+    setUploadedFileName(file.name);
 
-      // Read file as base64
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        setUploadedFile(reader.result); // base64 string
-      };
-      reader.readAsDataURL(file);
-    }
+    // Read file as base64
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      setUploadedFile(reader.result); // base64 string
+    };
+    reader.readAsDataURL(file);
+  }
 
-    setFormData((prev) => ({
-      ...prev,
-      [name]: type === "checkbox" ? checked : value,
-    }));
+  setFormData((prev) => ({
+    ...prev,
+    [name]: type === "checkbox" ? checked : value,
+  }));
 
-    if (name === "dob") {
-      const age = calculateAge(value);
-      if (age < 15) {
-        setAgeError("You must be at least 15 years old to apply.");
-      } else {
-        setAgeError("");
-      }
-    }
-  };
-
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    const age = calculateAge(formData.dob);
+  if (name === "dob") {
+    const age = calculateAge(value);
     if (age < 15) {
       setAgeError("You must be at least 15 years old to apply.");
-      return;
+    } else {
+      setAgeError("");
     }
-
-    if (formData.reason1.trim().length < 200) {
-      alert("Please enter at least 200 characters for why you want to join Nuvoro Academy.");
-      return;
-    }
-
-    if (formData.reason2.trim().length < 200) {
-      alert("Please enter at least 200 characters how you heard about Nuvoro Academy.");
-      return;
-    }
-
-    if (!formData.agree) {
-      alert("You must agree to the terms and privacy policy.");
-      return;
-    }
-
-    const templateParams = {
-      full_name: formData.fullName,
-      email: formData.email,
-      phone: formData.phone,
-      dob: formData.dob,
-      state: formData.state,
-      country: formData.country,
-      course: formData.course,
-      experience: formData.experience,
-      reason1: formData.reason1,
-      reason2: formData.reason2,
-      cv_file_name: uploadedFileName,
-      cv_file_data: uploadedFile,
-    };
+  }
+};
 
 
-    emailjs.send(
-      "service_ve7r6cd",      // Replace with your actual Service ID
-      "template_4ffyt9o",     // Replace with your actual Template ID
-      templateParams,
-      "h8yBYe52uixzYr2AV"       // Replace with your actual Public Key
-    )
-      .then(() => {
-        setShowPopup(true);
-        setTimeout(() => {
-          setShowPopup(false);
-          setFormData({
-            fullName: "",
-            email: "",
-            phone: "",
-            dob: "",
-            city: "",
-            country: "",
-            state: "",
-            course: "",
-            experience: "",
-            reason1: "",
-            reason2: "",
-            agree: false,
-          });
-          setUploadedFileName("");
-        }, 3000);
-      })
-      .catch((error) => {
-        console.error("Email send error:", error);
-        alert("Something went wrong. Please try again later.");
-      });
-  };
+const handleSubmit = (e) => {
+  e.preventDefault();
+
+  const age = calculateAge(formData.dob);
+  if (age < 15) {
+    setAgeError("You must be at least 15 years old to apply.");
+    return;
+  }
+
+  if (formData.reason1.trim().length < 200) {
+    alert("Please enter at least 200 characters for why you want to join Nuvoro Academy.");
+    return;
+  }
+
+  if (formData.reason2.trim().length < 200) {
+    alert("Please enter at least 200 characters how you heard about Nuvoro Academy.");
+    return;
+  }
+
+  if (!formData.agree) {
+    alert("You must agree to the terms and privacy policy.");
+    return;
+  }
+
+ const templateParams = {
+  full_name: formData.fullName,
+  email: formData.email,
+  phone: formData.phone,
+  dob: formData.dob,
+  state: formData.state,
+  country: formData.country,
+  course: formData.course,
+  experience: formData.experience,
+  reason1: formData.reason1,
+  reason2: formData.reason2,
+  cv_file_name: uploadedFileName,
+  cv_file_data: uploadedFile, 
+};
+
+
+  emailjs.send(
+    "service_ve7r6cd",      // Replace with your actual Service ID
+    "template_4ffyt9o",     // Replace with your actual Template ID
+    templateParams,
+    "h8yBYe52uixzYr2AV"       // Replace with your actual Public Key
+  )
+    .then(() => {
+      setShowPopup(true);
+      setTimeout(() => {
+        setShowPopup(false);
+        setFormData({
+          fullName: "",
+          email: "",
+          phone: "",
+          dob: "",
+          city: "",
+          country: "",
+          state: "",
+          course: "",
+          experience: "",
+          reason1: "",
+          reason2: "",
+          agree: false,
+        });
+        setUploadedFileName("");
+      }, 3000);
+    })
+    .catch((error) => {
+      console.error("Email send error:", error);
+      alert("Something went wrong. Please try again later.");
+    });
+};
 
 
   return (
@@ -316,7 +316,7 @@ const ApplicationPage = () => {
 
 
         <div className="upload-section">
-          <p className='form-text'>Upload CV or Portfolio</p>
+          <p className='form-text'> Upload CV or Portfolio</p>
           <label htmlFor="cvUpload" className="upload-button">
             Upload Here
           </label>
@@ -324,19 +324,17 @@ const ApplicationPage = () => {
             type="file"
             id="cvUpload"
             name="cv"
-            accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
             style={{ display: "none" }}
             onChange={handleChange}
           />
-          <span className='form-text'>(Optional – Accepted formats: PDF, DOC, DOCX, JPG, PNG)</span>
+          <span className='form-text'>(Optional)</span>
 
           {uploadedFileName && (
             <div className="file-name-box">
-              <strong>Uploaded:</strong> {uploadedFileName}
+              {uploadedFileName}
             </div>
           )}
         </div>
-
         <textarea
           name="reason2"
           placeholder="How did you know about Nuvoro Academy? (required)"
