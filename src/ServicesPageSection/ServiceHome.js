@@ -114,8 +114,8 @@ const ServiceHome = () => {
             <div className="quote-section">
                 <p className="quote-text">Interested in what we do?</p>
                 <div className="quote-buttons">
-                    <button className="btn primary">Get a Quote</button>
-                    <button className="btn secondary">Book free Consultation</button>
+                    <button className="btn primary"><a href='https://wa.link/x64l2w'  style={{color: 'white', textDecoration: 'none'}}>Get a Quote</a>  </button>
+                    <button className="btn secondary"><a href='https://wa.link/x64l2w' style={{color: '#3a6ad8', textDecoration: 'none'}}>Book free Consultation</a> </button>
                 </div>
             </div>
 

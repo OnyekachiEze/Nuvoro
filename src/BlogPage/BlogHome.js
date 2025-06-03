@@ -62,14 +62,19 @@ const BlogHome = () => {
                         height={300}
                     />
                     <h2 className="articcle-title">
-                        xAI says ‘unauthorized modification’ to Grok led to ‘white genocide’ content
+                        <a href='/XaiNews' style={{color: '#1b2a5b', textDecoration: 'none' }}>
+                            xAI says ‘unauthorized modification’ to Grok led to ‘white genocide’ content
+
+                        </a>
                     </h2>
                     <p className="articcle-description">
-                        xAI, the AI firm founded by Elon Musk, has said in a post, that an internal
-                        breach led to its chatbot Grok, publishing unsolicited responses referencing
-                        ‘white genocide in South Africa.’ The issue, which unfolded earlier this
-                        week, saw Grok repeatedly bring about the topic into unrelated discussions
-                        on the X platform, formerly Twitter, where the chatbot is integrated.
+                        <a href='/XaiNews' style={{color: '#1b2a5b', textDecoration: 'none' }}>
+                            xAI, the AI firm founded by Elon Musk, has said in a post, that an internal
+                            breach led to its chatbot Grok, publishing unsolicited responses referencing
+                            ‘white genocide in South Africa.’ The issue, which unfolded earlier this
+                            week, saw Grok repeatedly bring about the topic into unrelated discussions
+                            on the X platform, formerly Twitter, where the chatbot is integrated.
+                        </a>
                     </p>
                 </div>
             </div>

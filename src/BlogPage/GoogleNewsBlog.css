@@ -578,3 +578,85 @@
     font-size: 0.9rem;
   }
 }
+
+/* xAI Grok News Page Styling */
+.arms-godmode-background {
+    background: linear-gradient(to right, #eef2f3, #dfe9f3);
+    min-height: 100vh;
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.arms-godmode-container {
+    max-width: 900px;
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #1a1a1a;
+    line-height: 1.8;
+}
+
+.arms-godmode-title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #0d47a1;
+    text-align: center;
+}
+
+.arms-godmode-subtitle {
+    font-size: 1.2rem;
+    color: #555;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.arms-godmode-paragraph {
+    font-size: 1.05rem;
+    margin-bottom: 1rem;
+}
+
+.arms-godmode-highlight {
+    background: #fff8e1;
+    border-left: 4px solid #ffa000;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    color: #333;
+}
+
+.arms-godmode-list {
+    padding-left: 1.5rem;
+    list-style-type: disc;
+    margin-bottom: 1.5rem;
+}
+
+.arms-godmode-list li {
+    margin-bottom: 0.5rem;
+}
+
+.arms-godmode-footer {
+    margin-top: 2rem;
+    font-size: 0.95rem;
+    text-align: right;
+    color: #888;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .arms-godmode-container {
+        padding: 1.5rem;
+    }
+
+    .arms-godmode-title {
+        font-size: 2rem;
+    }
+
+    .arms-godmode-subtitle {
+        font-size: 1rem;
+    }
+}

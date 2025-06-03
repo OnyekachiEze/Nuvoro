@@ -33,7 +33,7 @@ const Navbar = () => {
                     <button className="get-started-btn-desktop" onClick={togglePopup}>Get Started</button>
                     {popupOpen && (
                         <div className="popup-menu">
-                            <a href="/services" className="popup-link">🔧 Want our services</a>
+                            <a href="/services" className="popup-link">🔧 Consultation</a>
                             <a href="/academy" className="popup-link">🏫 Academy</a>
                         </div>
                     )}

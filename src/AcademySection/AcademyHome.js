@@ -463,7 +463,7 @@ const AcademyHome = () => {
                         </p>
                     </div>
                     <button className="cohort-button" type="button" id='cohort-btn'>
-                        Register Now
+                        <a href='/register'  style={{textDecoration: 'none'}}>Register Now</a>
                     </button>
                 </div>
 

@@ -15,7 +15,7 @@ const PortfolioHome = () => {
                         innovation, functionality, and elegance.
                     </p> */}
                     <div className="banner-buttons">
-                        <button className="btn-primary">Book a free Consultation</button>
+                        <button className="btn-primary"><a href='https://wa.link/x64l2w'  style={{color: 'white', textDecoration: 'none'}}>Book a free Consultation</a></button>
                         <button className="btn-secondary"><a href='#projects'>See More Project</a> </button>
                     </div>
                 </div>

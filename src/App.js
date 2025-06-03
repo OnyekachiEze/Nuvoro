@@ -18,6 +18,7 @@ import SpiesNewsBlog from './BlogPage/SpiesNewsBlog';
 import MotoRazrReview from './BlogPage/MotoRazrReview'
 import MicrosoftSurfaceNews from './BlogPage/MicrosoftSurfaceNews';
 import ArmsRoboticLimbsNews from './BlogPage/ArmsRoboticLimbsNews';
+import XaiNews from './BlogPage/XaiNews';
 
 
 
@@ -80,6 +81,7 @@ const App = () => {
         <Route path="/MotoRazrReview" element={<MotoRazrReview />} />
         <Route path="/MicrosoftSurfaceNews" element={<MicrosoftSurfaceNews />} />
         <Route path="/ArmsRoboticLimbsNews" element={<ArmsRoboticLimbsNews />} />
+        <Route path="/XaiNews" element={<XaiNews />} />
 
 
         {/* Add more routes as needed */}

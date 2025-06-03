@@ -38,50 +38,47 @@ const CoursesTabs = () => {
             <div className="card-grid">
               {/* UI/UX Design Cards */}
               <article className="card">
-                <h3 className="card-title">Learning Track</h3>
+                <h3 className="card-title">Design User-Centered Interfaces</h3>
                 <img
                   src="card1.png"
                   alt="People in a tech meeting"
                   className="card-image"
                 />
                 <p className="card-heading">
-                  Unlock Your Tech Potential with Nuvoro Academy
+                  Learn to craft interfaces that prioritize usability
                 </p>
                 <p className="card-text">
-                  Whether you’re just starting or leveling up, our structured
-                  online/offline courses cater to every stage of your journey.
+                  Understand how thoughtful design choices directly enhance user satisfaction and retention across web and mobile platforms.
                 </p>
               </article>
 
               <article className="card">
-                <h3 className="card-title">Facilities</h3>
+                <h3 className="card-title">Master UX/UI & Prototyping</h3>
                 <img
                   src="card2.png"
                   alt="Group working in modern learning space"
                   className="card-image"
                 />
                 <p className="card-heading">
-                  Nuvoro Learning Hub: Designed for Success
+                  Dive deep into user research, wireframing
                 </p>
                 <p className="card-text">
-                  Boost your tech skills in our modern learning space, equipped
-                  with high-speed internet and provided laptops.
+                  Build scalable design systems and workflows that align with modern development processes and deliver consistent user experiences.
                 </p>
               </article>
 
               <article className="card">
-                <h3 className="card-title">Admission</h3>
+                <h3 className="card-title">Create Seamless Digital Experiences</h3>
                 <img
                   src="d188da345a1aa258f410cae6f82d4818.png"
                   alt="Happy graduates"
                   className="card-image"
                 />
                 <p className="card-heading">
-                  Easy, Simple and Friendly Admission Process
+                 Explore the psychology of user interaction
                 </p>
                 <p className="card-text">
-                  With just one click, Nuvoro opens up your path to the tech
-                  world also presenting virtual or actual class.
+                  everage industry-standard tools like Figma and Adobe XD. Create responsive, visually compelling products that users love to use.
                 </p>
               </article>
             </div>
